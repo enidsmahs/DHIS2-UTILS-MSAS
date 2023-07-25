@@ -1,0 +1,26 @@
+Query parameter	Required	Description	Options
+dimension	Yes	Dimensions and dimension items to be retrieved, repeated for each.	Any dimension
+filter	No	Filters and filter items to apply to the query, repeated for each.	Any dimension
+
+aggregationType	No	Aggregation type to use in the aggregation process.	SUM | AVERAGE | COUNT | STDDEV | VARIANCE
+measureCriteria	No	Filters for the data/measures.	EQ | GT | GE | LT | LE
+skipMeta	No	Exclude the meta data part of the response (improves performance).	false | true
+skipData	No	Exclude the data part of the response.	false | true
+skipRounding	No	Skip rounding of data values, i.e. provide full precision.	false | true
+hierarchyMeta	No	Include names of organisation unit ancestors and hierarchy paths of organisation units in the metadata.	false | true
+ignoreLimit	No	Ignore limit on max 50 000 records in response - use with care.	false | true
+tableLayout	No	Use plain data source or table layout for response.	false | true
+hideEmptyRows	No	Hides empty rows in response, applicable when table layout is true.	false | true
+showHierarchy	No	Display full org unit hierarchy path together with org unit name.	false | true
+includeNumDen	No	Include the numerator and denominator used to calculate the value in the response.	false | true
+displayProperty	No	Property to display for metadata.	NAME | SHORTNAME
+outputIdScheme	No	Property to use for metadata items the query response, can be identifier, code or name.	UID | CODE | NAME
+inputIdScheme	No	Property to use for metadata items in the request, can be identifier or code.	UID | CODE
+approvalLevel	No	Include data which has been approved at least up to the given approval level, refers to identfier of approval level.	Identifier of approval level
+relativePeriodDate	No	Date used as basis for relative periods.	Date.
+userOrgUnit	No	Explicitly define the user org units to utilize, overrides organisation units associated with current user, multiple identifiers can be separated by semi-colon.	Organisation unit identifiers.
+columns	No	Dimensions to use as columns for table layout.	Any dimension (must be query dimension)
+rows	No	Dimensions to use as rows for table layout.	Any dimension (must be query dimension)
+
+#ANALYTICX
+/api/25/analytics?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&filter=pe:2014Q1;2014Q2&filter=ou:O6uvpzGd5pu;lc3eMKXaEfw
