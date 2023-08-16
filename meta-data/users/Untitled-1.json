@@ -1,0 +1,99 @@
+{
+    "users": [
+        {
+            "lastUpdated": "2016-07-18T12:00:53.861",
+            "id": "pH4MVTge9Ic",
+            "created": "2014-06-27T10:02:28.113",
+            "name": "Doulo DER",
+            "displayName": "Doulo DER",
+            "externalAccess": false,
+            "surname": "DER",
+            "email": "douloder@yahoo.fr",
+            "lastCheckedInterpretations": "2014-07-05T12:13:23.989",
+            "firstName": "Doulo",
+            "phoneNumber": "00221 77 301 79 67",
+            "favorite": false,
+            "userCredentials": {
+                "lastUpdated": "2017-03-10T14:35:26.000",
+                "id": "jTfx08xvE4T",
+                "created": "2014-06-27T10:02:28.105",
+                "name": "Doulo DER",
+                "lastLogin": "2016-07-18T12:05:37.436",
+                "openId": "1252195400081",
+                "displayName": "Doulo DER",
+                "externalAuth": false,
+                "externalAccess": false,
+                "disabled": false,
+                "twoFA": false,
+                "passwordLastUpdated": "2016-07-18T12:00:53.733",
+                "invitation": false,
+                "selfRegistered": false,
+                "favorite": false,
+                "username": "doulo der",
+                "userInfo": {
+                    "id": "pH4MVTge9Ic"
+                },
+                "sharing": {
+                    "external": false
+                },
+                "favorites": [],
+                "cogsDimensionConstraints": [],
+                "catDimensionConstraints": [],
+                "translations": [],
+                "userGroupAccesses": [],
+                "attributeValues": [],
+                "userRoles": [
+                    {
+                        "id": "CgRWzeRDAL0"
+                    },
+                    {
+                        "id": "aa6MOaQM64f"
+                    },
+                    {
+                        "id": "aa6MOaQM64f"
+                    }
+                ],
+                "userAccesses": []
+            },
+            "sharing": {
+                "external": false
+            },
+            "favorites": [],
+            "teiSearchOrganisationUnits": [],
+            "translations": [],
+            "organisationUnits": [
+                {
+                    "id": "vJRQh3jzmwU"
+                }
+            ],
+            "dataViewOrganisationUnits": [
+                {
+                    "id": "vJRQh3jzmwU"
+                }
+            ],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "userGroups": [
+                {
+                    "id": "qCfubjuJ9WD"
+                },
+                {
+                    "id": "dRpejNVGnFl"
+                },
+                {
+                    "id": "jy2BIYwgxQm"
+                },
+                {
+                    "id": "z3LvSiyrcPC"
+                },
+                {
+                    "id": "ZvM4Bx2LLS3"
+                },
+                {
+                    "id": "mpOKCShc6XD"
+                }
+            ],
+            "userAccesses": []
+        }
+    ]
+}

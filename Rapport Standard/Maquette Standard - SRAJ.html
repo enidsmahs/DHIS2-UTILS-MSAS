@@ -1,0 +1,600 @@
+
+
+<!-- 
+    "author": "Shamsdine NDAW",
+    "name": "RAPPORT sTANDARD",
+    "version": "1.0",
+    "description": "RAPPORT STANDARD : "
+ -->
+ <!--  Entete -->
+<head>
+    <script src="../dhis-web-pivot/extjs/ext-all.js"></script>
+    <script src="../dhis-web-commons/d2libraries/analysis/reporttable.js"></script>
+    <script src="../dhis-web-commons/d2libraries/analysis/map.js"></script>
+    <script src="../dhis-web-commons/javascripts/openlayers/OpenLayers.js"></script>
+    <script type="text/javascript" src="../dhis-web-commons/javascripts/moment/moment-with-langs.min.js"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+ <!--   Pour la mise en forme de la présentation de la page HTML -->
+<style type="text/css">
+    body {
+        font-family: Georgia, sans-serif;
+        color: #3B3B3B;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        margin: 0;
+        padding: 4px 10px 6px;
+        background-color: #c8def6;
+        text-align: center;
+    }
+
+    menu {
+        padding-left: 8px;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    h1 {
+        color: black;
+        margin: 0;
+    }
+
+    h1,
+    h3 {
+        font-weight: lighter;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        float: left;
+    }
+
+    .chart {
+        border: 1px solid #ddd;
+        margin: 10px;
+    }
+
+    .chart.wide {
+        width: 800px;
+        height: 800px;
+    }
+
+    .map {
+        border: 0;
+        margin: 10px;
+    }
+
+    .map.wide {
+        width: 450px;
+        height: 300px;
+    }
+
+    .samaTitle {
+        font-family: 'Enriqueta', arial, serif;
+        line-height: 1.10;
+        margin: 0 0 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .samaTitlePrincipal {
+        font-family: 'Enriqueta', arial, serif;
+        line-height: 1.10;
+        margin: 0 0 10px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .divCenter {
+        text-align: center;
+    }
+
+    .bg-primary {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    }
+
+    /*
+ CSS for the main interaction
+*/
+    .accordion>input[type="checkbox"] {
+        position: absolute;
+        left: -100vw;
+    }
+
+    .accordion .content {
+        overflow-y: hidden;
+        height: 0;
+        transition: height 0.3s ease;
+    }
+
+    .accordion>input[type="checkbox"]:checked~.content {
+        height: auto;
+        overflow: visible;
+    }
+
+    .accordion label {
+        display: block;
+    }
+
+    /*
+ Styling
+*/
+
+    .accordion {
+        margin-bottom: 1em;
+    }
+
+    .accordion>input[type="checkbox"]:checked~.content {
+        padding: 8px;
+        border: 1px solid #93c1f2;
+        border-top: 0;
+    }
+
+    .accordion .handle {
+        margin: 0;
+        font-size: 1.125em;
+        line-height: 1.2em;
+    }
+
+    .accordion label {
+        color: #333;
+        cursor: pointer;
+        font-weight: normal;
+        padding: 8px;
+        background: #edf6ff;
+    }
+
+    .accordion label:hover,
+    .accordion label:focus {
+        background: #29bc69;
+        color: white;
+    }
+
+    .accordion .handle label:before {
+        font-family: 'fontawesome';
+        content: '\02795';
+        /* Unicode character for "plus" sign (+) */
+        float: right;
+        display: inline-block;
+        margin-right: 10px;
+        font-size: .58em;
+        line-height: 1.556em;
+        vertical-align: middle;
+    }
+
+    .accordion>input[type="checkbox"]:checked~.handle label:before {
+        content: "\2796";
+        /* Unicode character for "minus" sign (-) */
+    }
+
+
+    /*
+ Demo purposes only
+*/
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        max-width: 100%;
+    }
+
+    .accordion p:last-child {
+        margin-bottom: 0;
+    }
+</style>
+
+
+ <!-- Partie Script  -->
+<script type="text/javascript">
+
+    var dxOuUids = [];
+    var serverURL = "https://senegal.dhis2.org/dhis";
+
+    reportTablePlugin.url = "https://senegal.dhis2.org/dhis";
+    //reportTablePlugin.username =
+    //reportTablePlugin.password =
+    reportTablePlugin.loadingIndicator = true;
+
+    //$('#divResult').empty().append(PrintTable(data));
+
+    function PrintTable(data) {
+        var html = '<table class="pivot user-select displaydensity-NORMAL fontsize-NORMALy"><thead><tr>';
+        var headers = data.headers
+        var rows = data.rows
+        if (headers && headers.length) {
+
+            jQuery.each(headers, function (i) {
+                //getting heading at that key
+                html += '<th>' + headers[i].name + '</th>';
+            });
+            html += '</tr>';
+            html += '<tbody>';
+            jQuery.each(rows, function (k, r) {
+                jQuery.each(r, function (j) {
+                    html += '<td>' + rows[k][j] + '</td>';
+                });
+
+                html += '</tr>';
+            });
+        } else {
+            html += 'Pas de resultat</td></tr>';
+        }
+        html += '</tbody></table>';
+        return html;
+    }
+
+    function filter_org(orgUnitUID) {
+        console.log("Loading form");
+        console.log('sama_ouID : ' + orgUnitUID);
+
+        var requestURL = '../api/organisationUnits/' + orgUnitUID;
+        $.ajax({
+            type: "GET",
+            url: requestURL,
+            cache: false,
+            success: function (data) {
+                //console.log('data : ' + data.organisationUnitGroups);
+                var orgunitGroups = data.organisationUnitGroups;
+                var isPoste = false;
+                var isCentre = false;
+                var isEPS1 = false;
+                var isEPS2 = false;
+                var isEPS3 = false;
+
+                var cs_louga = false;
+                var cs_ziguinchor = false;
+                var cs_kasnack = false;
+                var RM_Dakar = false;
+
+
+                for (var i = 0; i < orgunitGroups.length; i++) {
+                    //console.log("organisation unit group: " + orgunitGroups[i].id)
+                    if (orgunitGroups[i].id === 'elD2xyvPUxh') { isPoste = true; break; }
+                    else if (orgunitGroups[i].id === 'Wx1Z05p1qwW') { isCentre = true; break; }
+                    else if (orgunitGroups[i].id === 'jPUSczEJX83') { isEPS1 = true; break; }
+                    else if (orgunitGroups[i].id === 'Iz7UikTGvRA') { isEPS2 = true; break; }
+                    else if (orgunitGroups[i].id === 'dwgx6MMoh8m') { isEPS3 = true; break; }
+                    else if (orgUnitUID === 'TaAV28KgmMi') { cs_louga = true; break; }
+                    else if (orgUnitUID === 'XWNWprY9RW0') { cs_ziguinchor = true; break; }
+                    else if (orgUnitUID === 'h7Y8Y6sGth0') { cs_kasnack = true; break; }
+                    //else if (orgUnitUID === 'S9nVJLlzYrK') { RM_Dakar = true; break; }
+
+                }
+
+                if (isPoste) {
+                    $('.ps').show();
+                    $('.cs').hide();
+                    $('.zig').hide();
+                    $('.kas').hide();
+                    $('.lg').hide();
+                    $('.ms').hide();
+                    $('.eps1').hide();
+                    $('.eps2').hide();
+                    $('.eps3').hide();
+                }
+                else if (isCentre) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (isEPS1) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (isEPS2) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (isEPS3) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (cs_louga) { $('.ps').hide(); $('.cs').hide(); $('.lg').show(); }
+                else if (cs_ziguinchor) { $('.ps').hide(); $('.cs').hide(); $('.zig').show(); }
+                else if (cs_kasnack) { $('.ps').hide(); $('.cs').hide(); $('.kas').show(); }
+                //else if (RM_Dakar) {$('.lg').hide();}
+            }
+        })
+    }
+
+    function makeOrgunitTables(ouIDs, ouGroups, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouIDs: ' + ouIDs + ', ouGroups: ' + ouGroups + ', tableID1: ' + tableID);
+        var requestURL = "../api/orgUnitAnalytics?ou=" + ouIDs + "&ougs=" + ouGroups + "&columns=" + ouGroups;
+
+        $.getJSON(requestURL, function (data) {
+
+            $(tableID1).empty().append(PrintTable(data));
+        });
+    }
+
+    function makeTables(ouID1, period1, dxIDs1, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ', period1: ' + period1 + ', dxIDs1: ' + dxIDs1 + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [{
+                "dimension": "ou",
+                "items": [{ "id": ouID1 }]
+            }],
+            "rows": [{
+                "dimension": "dx",
+                "items": dxIDs1
+            }],
+            "filters": [{
+                "dimension": "pe",
+                "items": [{ "id": period1 }]
+            }],
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_3DM(ouID1, period1, dxIDs1, cLevel, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [{
+                "dimension": "dx",
+                "items": dxIDs1
+            }],
+            "rows": [{
+                "dimension": "ou",
+                "items": cLevel
+            }],
+            "filters": [{
+                "dimension": "pe",
+                "items": [{ "id": period1 }]
+            }],
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_3DM_1(ouID1, period1, dxIDs1, cLevel, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [
+                { "dimension": "pe", "items": [{ "id": period1 }] }
+            ],
+            "rows": [
+                { "dimension": "ou", "items": cLevel },
+                { "dimension": "dx", "items": dxIDs1 }
+            ],
+            "filters": [
+
+            ],
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_4DM(ouID1, period1, dxIDs1, cLevel, tableID1, dx4, item4) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [
+                { "dimension": dx4, "items": item4 }
+            ],
+            "rows": [
+                { "dimension": "ou", "items": cLevel },
+                { "dimension": "dx", "items": dxIDs1 }
+            ],
+            "filters": [
+                { "dimension": "pe", "items": [{ "id": period1 }] }
+            ],
+
+            "showColTotals": false,
+            "showRowTotals": true,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_5DM(ouID1, period1, dxIDs1, cLevel, tableID1, dx4, item4, dx5, item5) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [
+                { "dimension": "dx", "items": dxIDs1 },
+                { "dimension": dx4, "items": item4 },
+                { "dimension": dx5, "items": item5 }
+            ],
+            "rows": [
+                { "dimension": "ou", "items": cLevel }
+            ],
+            "filters": [
+                { "dimension": "pe", "items": [{ "id": period1 }] }
+            ],
+
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+    }
+
+    function idsArray(a) {
+        var b = a.split(";");
+        var c = '[{"id":"' + b.join('"},{"id":"') + '"}]';
+        var d = JSON.parse(c); return d;
+    }
+
+    Ext.onReady(function () {
+
+        var date = dhis2.report.date;
+        console.log("Making report, start date of reporting period is " + date);
+        var LastMonth = moment(date).add('months', 11).format("YYYYMM");
+        var LastMonthPreviousYear = moment(date).subtract('months', 1).format("YYYYMM");
+        console.log("last month " + LastMonth + "; LastMonthPreviousYear " + LastMonthPreviousYear);
+        var periods = dhis2.report.periods;
+        var period = periods[0];
+        var samaSemester2 = (period) + 'S2';
+
+
+        var orgUnit = dhis2.report.organisationUnit; // An object
+        var name = orgUnit.name;
+        var ouID = orgUnit.id;
+        var orgUnitUids = ouID + ';';
+        var orgUnitChildren = dhis2.report.organisationUnitChildren; // An array with child org unit objects
+        var orgUnitLevel = dhis2.report.organisationUnitHierarchy.length;
+        var orgUnitHierarchy = dhis2.report.organisationUnitHierarchy;
+        var level = orgUnitHierarchy.length;
+        var childLevep = "LEVEL-" + (level + 1);
+
+        orgUnitChildren.sort(function compare(a, b) {
+            if (a.name < b.name) return -1;
+            if (a.name > b.name) return 1;
+            return 0;
+        });
+
+        parentChildUids = '{"id": "' + ouID + '"},';
+        for (var i = 0; i < orgUnitChildren.length; i++) {
+            orgUnitUids = orgUnitUids + orgUnitChildren[i].id + ';'; //Loop around to create a variable with the names of the child org unit
+            // parentChildUids = parentChildUids+",{'id':'"+orgUnitChildren[i].id+"'}"; //parent+children {"id": "USER_ORGUNIT"},{'id': orgUnitChildren[i].id}
+            parentChildUids = parentChildUids + '{"id": "' + orgUnitChildren[i].id + '"},';
+        }
+        parentChildUids = '[' + parentChildUids.slice(0, -1) + ']';
+
+        dxOuUids = JSON.parse(parentChildUids);
+        console.log('SAMA ORG ' + orgUnit.name);
+
+        filter_org(ouID);
+
+        // ****** definition des dimensions DX Complétude, Indicateurs, Element de donnée
+
+        // ETAPE 1 TABLES DES INDICATEURS A RECHERCHER DANS DHIS2
+        dxIDs_table1 = [
+            { "id": "aug1121IdnQ" },
+            { "id": "E6wh3G5RmWP" }
+        ];
+
+        // ****** fin definition
+
+        //***************************************//
+        var year = period.substr(0, 4);
+        $("#period").html('Ann&eacute;e: ' + year);
+        //$("#period").html(period);
+        console.log("period: " + period + " year: " + year);
+        $("#orgUnit").html(orgUnit.name);
+        $("#orgUnitAndPeriod").html(orgUnit.name + ' - ' + period);
+        //**************************************//
+
+        // VARIABLES AUTRES DIMENSIONS
+
+        var AGE_SR = ""
+        var optionsAgeSR = [
+            {"id" : ""}
+        ]
+
+        //FIN VARIABLES AUTRES DIMENSIONS
+
+        // ETAPE 2 APPEL DES FONCTIONS
+        //makeTablesLevel_4DM(ouID, period, dxIDs_table1, dxOuUids, table1, AGE_SR, optionsAgeSR);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table1, dxOuUids, table1);
+
+        // FIN APPEL FONCTIONS
+
+        setTimeout(function () { exponentials(); }, 3000);
+        setTimeout(function () { exponentials(); }, 10000);
+        setTimeout(function () { exponentials(); }, 30000);
+        setTimeout(function () { exponentials(); }, 30000);
+        setTimeout(function () { exponentials(); }, 50000);
+        setTimeout(function () { exponentials(); }, 30000);
+        setTimeout(function () { exponentials(); }, 50000);
+        setTimeout(function () { exponentials(); }, 70000);
+        setTimeout(function () { exponentials(); }, 70000);
+        setTimeout(function () { exponentials(); }, 70000);
+        setTimeout(function () { exponentials(); }, 70000);
+
+    });
+
+
+    function exponentials() {
+        var expReg = new RegExp("[0-9]{1}\.[0-9]*E[0-9]{1,3}");
+        $("td").each(function () {
+            if (expReg.test($(this)[0].innerHTML)) {
+                $(this)[0].innerHTML = parseFloat($(this)[0].innerHTML);
+            }
+        });
+        console.log("Fixed exponentials");
+    }
+
+</script>
+
+
+ <!-- ETAPE 3 Partie Vue du rapport standard  -->
+<div class="container-fluid">
+    <!-- LIGNE FIXE TITRE ET LOGOS  -->
+    <div class="row">
+        <div class="col-sm-12">
+            <header>
+                <div class="row border border-primary m-0">
+                    <div class="col-sm-2 mt-2 mb-2">
+                        <img alt="" height="55"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/langfr-225px-Flag_of_Senegal.svg.png"
+                            style="float: left;" width="80" />
+                    </div>
+                    <div class="col-sm-8">
+                        <p class="samaTitlePrincipal mt-2">
+                            Rapprt Standard - SRAJ
+                        </p>
+                        <span class="samaTitlePrincipal" id="orgUnitAndPeriod"></span>
+                    </div>
+
+                    <div class="col-sm-2 mt-2 mb-2">
+                        <img alt="" height="55"
+                            src="https://www.developmentaid.org/files/organizationLogos/ministry-of-health-and-social-action-of-senegal-ministere-de-la-sante-et-de-laction-sociale-143684.jpg"
+                            style="float: right;" width="80" />
+                    </div>
+
+                </div>
+            </header>
+        </div>
+    </div>
+    <br />
+    <!-- FIN LIGNE FIXE TITRE ET LOGOS  -->
+
+
+    <div class="row">
+
+        <!--PARTIE INDICATEURS -->
+        <section class="accordion">
+            <input type="checkbox" name="collapse2" id="handle2">
+            <h2 class="handle">
+                <label for="handle2" class="samaTitle">INDICATEURS</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table1'></div>
+            </div>
+        </section>
+
+
+    </div>
+
+</div>

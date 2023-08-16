@@ -1,0 +1,594 @@
+<!-- 
+    "authors": "Shamsdine NDAW",
+    "name": "Rapport Trim Lepre EPS",
+    "version": "1.0",
+    "description": "Formulaire Trimestriel Lepre"
+ -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/floatthead/1.4.0/jquery.floatThead-slim.min.js"></script>
+<script>
+    /* 
+    Fonction qui permet la tabulation
+*/
+    $(function () {
+        $("#tabs").tabs();
+    });
+</script>
+<div id="tabs">
+    <ul wfd-id="6">
+        <li wfd-id="8"><a href="#Sec1">Prise en charge des cas compliques</a></li>
+        <li wfd-id="8"><a href="#Sec2">PRIP</a></li>
+        <li wfd-id="7"><a href="#Sec3">Donn&eacute;es labo EPS (Biopsie)</a></li>
+    </ul>
+
+    <div id="Sec1">
+        <table style="border:1px solid #000000">
+            <colgroup width="229">
+            </colgroup>
+            <colgroup span="4" width="163">
+            </colgroup>
+            <colgroup span="6" width="128">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td align="center" bgcolor="#B4C7DC" height="59" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Motifs d&#39;hospitalisation</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Nombre Ancien cas de L&egrave;pre hospitalis&eacute; durant le
+                                    trimestre(a)</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Nombre Nouveau cas de L&egrave;pre Hospitalis&eacute; durant le
+                                    trimestre(b)</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Total cas hospitalis&eacute;s( a+b)</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Dur&eacute;e moyenne de l&#39;hospitalisation (jour)</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" colspan="5"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">issue de l&#39;hospitalisation</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Observations</font>
+                            </font>
+                        </b></td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#B4C7DC"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Nombre de cas Gu&eacute;ri</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Nombre de cas stable</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Nombre cas de transfert sortant</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Nombre total de d&eacute;c&eacute;s</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">Autres</font>
+                            </font>
+                        </b></td>
+                </tr>
+                <tr>
+                    <td align="left" height="46"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">REACTION DE TYPE 1 (REACTIONS REVERSES )</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">REACTION DE TYPE 2 (ENL)</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">NEVRITE </font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="48"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">MAUX PERFORANTS PLANTAIRES</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="48"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">TOXIDERMIE (ALLERGIE A LA DDS)</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">AMPUTATION</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">DECOMPRESSION NERVEUSE</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">AUTRES : ( &agrave; pr&eacute;ciser)</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" bgcolor="#B4C7DC" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">TOTAL</font>
+                        </b></td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Sec2">
+        <table style="border:1px solid #000000">
+            <colgroup width="229">
+            </colgroup>
+            <colgroup span="4" width="163">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td align="center" bgcolor="#B4C7DC" height="51" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">MOTIFS DE CONSULTATION</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">NOUVEAUX CAS. DURANT TRIMESTRE</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">ANCIENS CAS. DURANT TRIMESTRE</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">TOTAL CAS DURANT TRIMESTRE</font>
+                            </font>
+                        </b></td>
+                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <b>
+                            <font face="Liberation Serif">
+                                <font color="#000000">OBSERVATIONS</font>
+                            </font>
+                        </b></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td align="left" height="48"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">REACTION DE TYPE 2 (ENL)</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">NEVRITE </font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="48"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">MAUX PERFORANTS PLANTAIRES</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="48"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">TOXIDERMIE (ALLERGIE A LA DDS)</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="left" height="26"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        <font face="Liberation Serif">AUTRES : ( &agrave; pr&eacute;ciser)</font>
+                    </td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                    <td align="left"
+                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Sec3">
+
+    </div>
+</div>

@@ -1,0 +1,1945 @@
+{
+    "pager": {
+        "page": 1,
+        "pageCount": 1,
+        "total": 30,
+        "pageSize": 50
+    },
+    "categoryOptions": [
+        {
+            "lastUpdated": "2021-12-21T10:29:44.650",
+            "id": "uMTo1XKoguL",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/uMTo1XKoguL",
+            "created": "2017-10-13T13:13:27.799",
+            "name": "DELETE 10 - 15 ans",
+            "shortName": "10 - 15 ans",
+            "displayName": "10 - 15 ans",
+            "publicAccess": "rwrw----",
+            "displayShortName": "10 - 15 ans",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "uMTo1XKoguL",
+            "displayFormName": "10 - 15 ans",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.650",
+            "id": "Hg1EkZKyPLb",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/Hg1EkZKyPLb",
+            "created": "2014-05-09T11:46:00.026",
+            "name": "DELETE 10-19 ans",
+            "shortName": "10-19 ans",
+            "displayName": "10-19 ans",
+            "publicAccess": "rwrw----",
+            "displayShortName": "10-19 ans",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "Hg1EkZKyPLb",
+            "displayFormName": "10-19 ans",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "zMa9PCkVpD1",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Amadou Bamba CISS",
+                "name": "Amadou Bamba CISS",
+                "id": "zMa9PCkVpD1",
+                "username": "bamba"
+            },
+            "user": {
+                "displayName": "Amadou Bamba CISS",
+                "name": "Amadou Bamba CISS",
+                "id": "zMa9PCkVpD1",
+                "username": "bamba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.652",
+            "id": "uw4jpU9wy1H",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/uw4jpU9wy1H",
+            "created": "2017-10-13T13:14:31.871",
+            "name": "DELETE 20 ans & +",
+            "shortName": "20 ans & +",
+            "displayName": "20 ans & +",
+            "publicAccess": "rwrw----",
+            "displayShortName": "20 ans & +",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "uw4jpU9wy1H",
+            "displayFormName": "20 ans & +",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.652",
+            "id": "IvHyopHlnrj",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/IvHyopHlnrj",
+            "created": "2017-10-13T13:12:48.787",
+            "name": "DELETE 3 - 10 ans",
+            "shortName": "3 - 10 ans",
+            "displayName": "3 - 10 ans",
+            "publicAccess": "rwrw----",
+            "displayShortName": "3 - 10 ans",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "IvHyopHlnrj",
+            "displayFormName": "3 - 10 ans",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.653",
+            "id": "CqgwF5SWR50",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/CqgwF5SWR50",
+            "created": "2016-06-23T12:41:24.516",
+            "name": "DELETE 6-11mois",
+            "shortName": "6-11mois",
+            "displayName": "6-11mois",
+            "publicAccess": "rwrw----",
+            "displayShortName": "6-11mois",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "CqgwF5SWR50",
+            "displayFormName": "6-11mois",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "chriSx5QH6g",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "ndeye maty mbow",
+                "name": "ndeye maty mbow",
+                "id": "chriSx5QH6g",
+                "username": "matymbow"
+            },
+            "user": {
+                "displayName": "ndeye maty mbow",
+                "name": "ndeye maty mbow",
+                "id": "chriSx5QH6g",
+                "username": "matymbow"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.662",
+            "id": "zvtr9fNgI5E",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/zvtr9fNgI5E",
+            "created": "2014-07-05T13:38:02.836",
+            "name": "DELETE CAP",
+            "shortName": "CAP",
+            "displayName": "CAP",
+            "publicAccess": "rwrw----",
+            "displayShortName": "CAP",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "zvtr9fNgI5E",
+            "displayFormName": "CAP",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "UZcoqqM0Lr4",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Sadia SONKO",
+                "name": "Sadia SONKO",
+                "id": "UZcoqqM0Lr4",
+                "username": "badou"
+            },
+            "user": {
+                "displayName": "Sadia SONKO",
+                "name": "Sadia SONKO",
+                "id": "UZcoqqM0Lr4",
+                "username": "badou"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.665",
+            "id": "DYErWvcyx6S",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/DYErWvcyx6S",
+            "created": "2014-04-07T17:37:51.880",
+            "name": "DELETE Communauté Rurale",
+            "shortName": "Communauté Rurale",
+            "displayName": "Communauté Rurale",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Communauté Rurale",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "DYErWvcyx6S",
+            "displayFormName": "Communauté Rurale",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [
+                {
+                    "id": "jp2mllwAlB6"
+                }
+            ],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.665",
+            "id": "W3Y50MJmUR4",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/W3Y50MJmUR4",
+            "created": "2019-05-22T13:19:47.504",
+            "name": "DELETE Conseil département",
+            "shortName": "Conseil département",
+            "displayName": "Conseil département",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Conseil département",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "W3Y50MJmUR4",
+            "displayFormName": "Conseil département",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "nCSHuAH9pqN",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Fatou Kine SONKO",
+                "name": "Fatou Kine SONKO",
+                "id": "nCSHuAH9pqN",
+                "username": "kineaicha"
+            },
+            "user": {
+                "displayName": "Fatou Kine SONKO",
+                "name": "Fatou Kine SONKO",
+                "id": "nCSHuAH9pqN",
+                "username": "kineaicha"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.665",
+            "id": "z7E9boECFCQ",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/z7E9boECFCQ",
+            "created": "2014-07-05T13:56:28.467",
+            "name": "DELETE Contractualisation",
+            "shortName": "Contractualisation",
+            "displayName": "Contractualisation",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Contractualisation",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "z7E9boECFCQ",
+            "displayFormName": "Contractualisation",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "UZcoqqM0Lr4",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Sadia SONKO",
+                "name": "Sadia SONKO",
+                "id": "UZcoqqM0Lr4",
+                "username": "badou"
+            },
+            "user": {
+                "displayName": "Sadia SONKO",
+                "name": "Sadia SONKO",
+                "id": "UZcoqqM0Lr4",
+                "username": "badou"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.665",
+            "id": "Ne92nNIyWPT",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/Ne92nNIyWPT",
+            "created": "2014-07-05T14:03:38.480",
+            "name": "DELETE DISTRICTS",
+            "shortName": "DISTRICTS",
+            "displayName": "DISTRICTS",
+            "publicAccess": "rwrw----",
+            "displayShortName": "DISTRICTS",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "Ne92nNIyWPT",
+            "displayFormName": "DISTRICTS",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "UZcoqqM0Lr4",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Sadia SONKO",
+                "name": "Sadia SONKO",
+                "id": "UZcoqqM0Lr4",
+                "username": "badou"
+            },
+            "user": {
+                "displayName": "Sadia SONKO",
+                "name": "Sadia SONKO",
+                "id": "UZcoqqM0Lr4",
+                "username": "badou"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.668",
+            "id": "MBGfML8HhVM",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/MBGfML8HhVM",
+            "created": "2019-03-21T14:27:50.325",
+            "name": "DELETE Echec thérapeutique ",
+            "shortName": "Echec thérapeutique ",
+            "displayName": "Echec thérapeutique ",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Echec thérapeutique ",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "MBGfML8HhVM",
+            "displayFormName": "Echec thérapeutique ",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "CxrHhliKQUT",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Aidara Diop",
+                "name": "Aidara Diop",
+                "id": "CxrHhliKQUT",
+                "username": "aidara"
+            },
+            "user": {
+                "displayName": "Aidara Diop",
+                "name": "Aidara Diop",
+                "id": "CxrHhliKQUT",
+                "username": "aidara"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.669",
+            "id": "s4UsVMuxMFI",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/s4UsVMuxMFI",
+            "created": "2021-01-19T15:18:33.099",
+            "name": "DELETE FE",
+            "shortName": "FE",
+            "displayName": "FE",
+            "publicAccess": "rwrw----",
+            "displayShortName": "FE",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "s4UsVMuxMFI",
+            "displayFormName": "FE",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "nCSHuAH9pqN",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Fatou Kine SONKO",
+                "name": "Fatou Kine SONKO",
+                "id": "nCSHuAH9pqN",
+                "username": "kineaicha"
+            },
+            "user": {
+                "displayName": "Fatou Kine SONKO",
+                "name": "Fatou Kine SONKO",
+                "id": "nCSHuAH9pqN",
+                "username": "kineaicha"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.669",
+            "id": "BY7lghR3TlN",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/BY7lghR3TlN",
+            "created": "2014-04-25T13:04:30.526",
+            "name": "DELETE Femme en âge de reproduction",
+            "shortName": "Femme en âge de reproduction",
+            "displayName": "Femme en âge de reproduction",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Femme en âge de reproduction",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "BY7lghR3TlN",
+            "displayFormName": "Femme en âge de reproduction",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.669",
+            "id": "OclAeyqgBdK",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/OclAeyqgBdK",
+            "created": "2020-11-17T11:24:23.162",
+            "name": "DELETE Féminin",
+            "shortName": "Féminin",
+            "displayName": "Féminin",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Féminin",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "OclAeyqgBdK",
+            "displayFormName": "Féminin",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.674",
+            "id": "HkIx6oYwzHv",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/HkIx6oYwzHv",
+            "created": "2017-08-01T13:50:02.621",
+            "name": "DELETE IMAGERIE MEDICALE",
+            "shortName": "IMAGERIE MEDICALE",
+            "displayName": "IMAGERIE MEDICALE",
+            "publicAccess": "rwrw----",
+            "displayShortName": "IMAGERIE MEDICALE",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "HkIx6oYwzHv",
+            "displayFormName": "IMAGERIE MEDICALE",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "bcH7rj3IFIw",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Ousmane CISSE",
+                "name": "Ousmane CISSE",
+                "id": "bcH7rj3IFIw",
+                "username": "ousmane"
+            },
+            "user": {
+                "displayName": "Ousmane CISSE",
+                "name": "Ousmane CISSE",
+                "id": "bcH7rj3IFIw",
+                "username": "ousmane"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.674",
+            "id": "IXUl7nPM4Lp",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/IXUl7nPM4Lp",
+            "created": "2014-04-23T12:05:04.369",
+            "name": "DELETE Jour 7",
+            "shortName": "Jour 7",
+            "displayName": "Jour 7",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Jour 7",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "IXUl7nPM4Lp",
+            "displayFormName": "Jour 7",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.675",
+            "id": "kZsZxjqA60d",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/kZsZxjqA60d",
+            "created": "2020-11-17T11:24:23.162",
+            "name": "DELETE Masculin",
+            "shortName": "Masculin",
+            "displayName": "Masculin",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Masculin",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "kZsZxjqA60d",
+            "displayFormName": "Masculin",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.675",
+            "id": "uh9Rsc7mQ2t",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/uh9Rsc7mQ2t",
+            "created": "2018-07-27T09:56:26.897",
+            "name": "DELETE Medicament",
+            "shortName": "Medicament",
+            "displayName": "Medicament",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Medicament",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "uh9Rsc7mQ2t",
+            "displayFormName": "Medicament",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "CxrHhliKQUT",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Aidara Diop",
+                "name": "Aidara Diop",
+                "id": "CxrHhliKQUT",
+                "username": "aidara"
+            },
+            "user": {
+                "displayName": "Aidara Diop",
+                "name": "Aidara Diop",
+                "id": "CxrHhliKQUT",
+                "username": "aidara"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.675",
+            "id": "Z7jQJbE31BY",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/Z7jQJbE31BY",
+            "created": "2019-03-27T13:35:20.757",
+            "name": "DELETE Montant facture a l’ACMU durant ce mois",
+            "shortName": "Montant facture a l’ACMU durant ce mois",
+            "displayName": "Montant facture a l’ACMU durant ce mois",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Montant facture a l’ACMU durant ce mois",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "Z7jQJbE31BY",
+            "displayFormName": "Montant facture a l’ACMU durant ce mois",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [
+                {
+                    "id": "W9fUY8sPY4v"
+                }
+            ],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.675",
+            "id": "XQH6oG2M8dc",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/XQH6oG2M8dc",
+            "created": "2017-11-20T12:52:51.201",
+            "name": "DELETE Nombre d'enfants appuyes",
+            "shortName": "Nombre d'enfants appuyes",
+            "displayName": "Nombre d'enfants appuyes",
+            "publicAccess": "rw------",
+            "displayShortName": "Nombre d'enfants appuyes",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "XQH6oG2M8dc",
+            "displayFormName": "Nombre d'enfants appuyes",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rw------"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.675",
+            "id": "JT7SkPkuvM2",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/JT7SkPkuvM2",
+            "created": "2017-11-20T12:52:02.900",
+            "name": "DELETE Nombre d'enfants demandeurs d'appui scolaire",
+            "shortName": "Nombre d'enfants demandeurs d'appui scolaire",
+            "displayName": "Nombre d'enfants demandeurs d'appui scolaire",
+            "publicAccess": "rw------",
+            "displayShortName": "Nombre d'enfants demandeurs d'appui scolaire",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "JT7SkPkuvM2",
+            "displayFormName": "Nombre d'enfants demandeurs d'appui scolaire",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rw------"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.675",
+            "id": "kUSu6vy31gU",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/kUSu6vy31gU",
+            "created": "2018-01-24T17:34:09.241",
+            "name": "DELETE Nombres Satisfaites",
+            "shortName": "Nombres Satisfaites",
+            "displayName": "Nombres Satisfaites",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Nombres Satisfaites",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "kUSu6vy31gU",
+            "displayFormName": "Nombres Satisfaites",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "nDKdLEyx3hP",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Abdou CAMARA",
+                "name": "Abdou CAMARA",
+                "id": "nDKdLEyx3hP",
+                "username": "camtrad"
+            },
+            "user": {
+                "displayName": "Abdou CAMARA",
+                "name": "Abdou CAMARA",
+                "id": "nDKdLEyx3hP",
+                "username": "camtrad"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.675",
+            "id": "FgdQLAGuuI9",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/FgdQLAGuuI9",
+            "created": "2016-06-03T11:50:09.628",
+            "name": "DELETE Nouvelle dans la structure",
+            "shortName": "Nouvelle dans la structure",
+            "displayName": "Nouvelle dans la structure",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Nouvelle dans la structure",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "FgdQLAGuuI9",
+            "displayFormName": "Nouvelle dans la structure",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "B9ZHXIkF6Fh",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "user": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [
+                {
+                    "id": "JCOYcWN65sm"
+                },
+                {
+                    "id": "OWUjFsQspDG"
+                },
+                {
+                    "id": "VxaEyR1zM3Z"
+                },
+                {
+                    "id": "czJrA7DFLkF"
+                },
+                {
+                    "id": "zpk5UJDnhYA"
+                }
+            ],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.676",
+            "id": "obFvx1EkxkX",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/obFvx1EkxkX",
+            "created": "2018-07-28T11:01:38.922",
+            "name": "DELETE Paiement direct",
+            "shortName": "Paiement direct",
+            "displayName": "Paiement direct",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Paiement direct",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "obFvx1EkxkX",
+            "displayFormName": "Paiement direct",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "chriSx5QH6g",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "ndeye maty mbow",
+                "name": "ndeye maty mbow",
+                "id": "chriSx5QH6g",
+                "username": "matymbow"
+            },
+            "user": {
+                "displayName": "ndeye maty mbow",
+                "name": "ndeye maty mbow",
+                "id": "chriSx5QH6g",
+                "username": "matymbow"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.676",
+            "id": "hHVE9s3xRhZ",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/hHVE9s3xRhZ",
+            "created": "2018-07-28T11:01:56.490",
+            "name": "DELETE Paiement indirect",
+            "shortName": "Paiement indirect",
+            "displayName": "Paiement indirect",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Paiement indirect",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "hHVE9s3xRhZ",
+            "displayFormName": "Paiement indirect",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "chriSx5QH6g",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "ndeye maty mbow",
+                "name": "ndeye maty mbow",
+                "id": "chriSx5QH6g",
+                "username": "matymbow"
+            },
+            "user": {
+                "displayName": "ndeye maty mbow",
+                "name": "ndeye maty mbow",
+                "id": "chriSx5QH6g",
+                "username": "matymbow"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.676",
+            "id": "B5iEMbRinX0",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/B5iEMbRinX0",
+            "created": "2021-10-29T10:26:49.236",
+            "name": "DELETE Perdus de vue",
+            "shortName": "Perdus de vue",
+            "displayName": "Perdus de vue",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Perdus de vue",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "B5iEMbRinX0",
+            "displayFormName": "Perdus de vue",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.676",
+            "id": "ZGgfFqwjDtn",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/ZGgfFqwjDtn",
+            "created": "2017-11-21T10:49:43.201",
+            "name": "DELETE Personnes <=15",
+            "shortName": "Personnes <=15",
+            "displayName": "Personnes <=15",
+            "publicAccess": "rw------",
+            "displayShortName": "Personnes <=15",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "ZGgfFqwjDtn",
+            "displayFormName": "Personnes <=15",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rw------"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [
+                {
+                    "id": "ZLZUz4iFTre"
+                },
+                {
+                    "id": "Jrqqg7EdAAT"
+                }
+            ],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.676",
+            "id": "bQ2vsBqBCob",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/bQ2vsBqBCob",
+            "created": "2017-11-21T10:50:52.431",
+            "name": "DELETE Personnes > 15 <= 60",
+            "shortName": "Personnes > 15 <= 60",
+            "displayName": "Personnes > 15 <= 60",
+            "publicAccess": "rw------",
+            "displayShortName": "Personnes > 15 <= 60",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "bQ2vsBqBCob",
+            "displayFormName": "Personnes > 15 <= 60",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rw------"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [
+                {
+                    "id": "fqDI3I5nCtM"
+                },
+                {
+                    "id": "Sh0O0ypt3Xi"
+                }
+            ],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.676",
+            "id": "XEDAtOORyKA",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/XEDAtOORyKA",
+            "created": "2017-11-21T10:51:10.069",
+            "name": "DELETE Personnes > 60",
+            "shortName": "Personnes > 60",
+            "displayName": "Personnes > 60",
+            "publicAccess": "rw------",
+            "displayShortName": "Personnes > 60",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "XEDAtOORyKA",
+            "displayFormName": "Personnes > 60",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rw------"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [
+                {
+                    "id": "i4sCYclcY8X"
+                },
+                {
+                    "id": "n1Da95ia82G"
+                }
+            ],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        },
+        {
+            "lastUpdated": "2021-12-21T10:29:44.685",
+            "id": "hqLQK703ULy",
+            "href": "https://pev.hispwca.org/senegal/api/categoryOptions/hqLQK703ULy",
+            "created": "2016-06-09T13:58:10.523",
+            "name": "DELETE Échec",
+            "shortName": "Échec",
+            "displayName": "Échec",
+            "publicAccess": "rwrw----",
+            "displayShortName": "Échec",
+            "externalAccess": false,
+            "periodOffset": 0,
+            "dimensionItem": "hqLQK703ULy",
+            "displayFormName": "Échec",
+            "isDefault": false,
+            "favorite": false,
+            "dimensionItemType": "CATEGORY_OPTION",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true,
+                "data": {
+                    "read": true,
+                    "write": true
+                }
+            },
+            "lastUpdatedBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "sharing": {
+                "owner": "B9ZHXIkF6Fh",
+                "external": false,
+                "public": "rwrw----"
+            },
+            "createdBy": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "user": {
+                "displayName": "Sakibou Alassani",
+                "name": "Sakibou Alassani",
+                "id": "B9ZHXIkF6Fh",
+                "username": "sakibou"
+            },
+            "favorites": [],
+            "translations": [],
+            "categories": [],
+            "organisationUnits": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "categoryOptionCombos": [],
+            "categoryOptionGroups": [],
+            "userAccesses": [],
+            "legendSets": []
+        }
+    ]
+}

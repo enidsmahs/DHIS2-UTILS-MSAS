@@ -1,0 +1,62 @@
+{
+    "categories": [
+        {
+            "lastUpdated": "2019-03-15T16:47:46.503",
+            "id": "GL1Ck5PhHyC",
+            "href": "https://pev.hispwca.org/senegal/api/categories/GL1Ck5PhHyC",
+            "created": "2016-06-03T16:53:48.188",
+            "name": "DELETE Activités préventives",
+            "shortName": "Activités préventives",
+            "dataDimensionType": "DISAGGREGATION",
+            "dimensionType": "CATEGORY",
+            "displayName": "Activités préventives",
+            "publicAccess": "rw------",
+            "displayShortName": "Activités préventives",
+            "externalAccess": false,
+            "dimension": "GL1Ck5PhHyC",
+            "allItems": false,
+            "displayFormName": "Activités préventives",
+            "dataDimension": false,
+            "favorite": false,
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true
+            },
+            "lastUpdatedBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "sharing": {
+                "owner": "rmYLw7Uh0pv",
+                "external": false,
+                "public": "rw------"
+            },
+            "createdBy": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "user": {
+                "displayName": "Mamadou DJIBA",
+                "name": "Mamadou DJIBA",
+                "id": "rmYLw7Uh0pv",
+                "username": "Djiba"
+            },
+            "favorites": [],
+            "translations": [],
+            "categoryCombos": [],
+            "categoryOptions": [],
+            "userGroupAccesses": [],
+            "attributeValues": [],
+            "userAccesses": [],
+            "items": []
+        }
+    ]
+}
