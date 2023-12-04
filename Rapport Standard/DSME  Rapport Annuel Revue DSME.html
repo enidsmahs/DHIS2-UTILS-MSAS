@@ -1,0 +1,768 @@
+
+
+<!-- 
+    "author": "Shamsdine NDAW",
+    "name": "RAPPORT sTANDARD",
+    "version": "1.0",
+    "description": "RAPPORT STANDARD : "
+ -->
+ <!--  Entete -->
+<head>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=M0Sh-siiZPOoO1Z6xEMje8mW_zrg-X_999C4DbYdGGY60qz1DMwYw9woEBBN92qbF2fQ4mHFKRCRq7bRWcg3wNV7_Q5ZBKPBlZVBqVdw8zA" charset="UTF-8"></script><script src="../dhis-web-pivot/extjs/ext-all.js"></script>
+    <script src="../dhis-web-commons/d2libraries/analysis/reporttable.js"></script>
+    <script src="../dhis-web-commons/d2libraries/analysis/map.js"></script>
+    <script src="../dhis-web-commons/javascripts/openlayers/OpenLayers.js"></script>
+    <script type="text/javascript" src="../dhis-web-commons/javascripts/moment/moment-with-langs.min.js"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+
+ <!--   Pour la mise en forme de la présentation de la page HTML -->
+<style type="text/css">
+    body {
+        font-family: Georgia, sans-serif;
+        color: #3B3B3B;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        margin: 0;
+        padding: 4px 10px 6px;
+        background-color: #c8def6;
+        text-align: center;
+    }
+
+    menu {
+        padding-left: 8px;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    h1 {
+        color: black;
+        margin: 0;
+    }
+
+    h1,
+    h3 {
+        font-weight: lighter;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        float: left;
+    }
+
+    .chart {
+        border: 1px solid #ddd;
+        margin: 10px;
+    }
+
+    .chart.wide {
+        width: 800px;
+        height: 800px;
+    }
+
+    .map {
+        border: 0;
+        margin: 10px;
+    }
+
+    .map.wide {
+        width: 450px;
+        height: 300px;
+    }
+
+    .samaTitle {
+        font-family: 'Enriqueta', arial, serif;
+        line-height: 1.10;
+        margin: 0 0 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .samaTitlePrincipal {
+        font-family: 'Enriqueta', arial, serif;
+        line-height: 1.10;
+        margin: 0 0 10px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .divCenter {
+        text-align: center;
+    }
+
+    .bg-primary {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    }
+    .header {
+        border-radius: 50px;
+        padding: 50px;
+        background-color: rgb(136, 207, 248);
+        box-shadow: 10px 5px 5px black;
+        margin: 50px;
+
+    }
+    .col-sm-20{
+        padding: 5px;
+        text-align: center;
+    }
+
+    h2{
+        font-family:'Dancing Script', sans-serif;
+    }
+    
+    
+
+
+
+    
+    
+    
+
+    /*
+ CSS for the main interaction
+*/
+    .accordion>input[type="checkbox"] {
+        position: absolute;
+        left: -100vw;
+    }
+
+    .accordion .content {
+        overflow-y: hidden;
+        height: 0;
+        transition: height 0.3s ease;
+    }
+
+    .accordion>input[type="checkbox"]:checked~.content {
+        height: auto;
+        overflow: visible;
+    }
+
+    .accordion label {
+        display: block;
+    }
+
+    /*
+ Styling
+*/
+
+    .accordion {
+        margin-bottom: 1em;
+    }
+
+    .accordion>input[type="checkbox"]:checked~.content {
+        padding: 8px;
+        border: 1px solid #93c1f2;
+        border-top: 0;
+    }
+
+    .accordion .handle {
+        margin: 0;
+        font-size: 1.125em;
+        line-height: 1.2em;
+    }
+
+    .accordion label {
+        color: #333;
+        cursor: pointer;
+        font-weight: normal;
+        padding: 8px;
+        background: #edf6ff;
+    }
+
+    .accordion label:hover,
+    .accordion label:focus {
+        background: rgb(136, 207, 248);
+        color: white;
+    }
+
+    .accordion .handle label:before {
+        font-family: 'fontawesome';
+        content: '\02795';
+        /* Unicode character for "plus" sign (+) */
+        float: right;
+        display: inline-block;
+        margin-right: 10px;
+        font-size: .58em;
+        line-height: 1.556em;
+        vertical-align: middle;
+    }
+
+    .accordion>input[type="checkbox"]:checked~.handle label:before {
+        content: "\2796";
+        /* Unicode character for "minus" sign (-) */
+    }
+
+
+    /*
+ Demo purposes only
+*/
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .accordion {
+        max-width: 100%;
+    }
+
+    .accordion p:last-child {
+        margin-bottom: 0;
+    }
+</style>
+
+
+ <!-- Partie Script  -->
+<script type="text/javascript">
+
+    var dxOuUids = [];
+    var serverURL = "https://senegal.dhis2.org/dhis";
+
+    reportTablePlugin.url = "https://senegal.dhis2.org/dhis";
+    //reportTablePlugin.username =
+    //reportTablePlugin.password =
+    reportTablePlugin.loadingIndicator = true;
+
+    //$('#divResult').empty().append(PrintTable(data));
+
+    function PrintTable(data) {
+        var html = '<table class="pivot user-select displaydensity-NORMAL fontsize-NORMALy"><thead><tr>';
+        var headers = data.headers
+        var rows = data.rows
+        if (headers && headers.length) {
+
+            jQuery.each(headers, function (i) {
+                //getting heading at that key
+                html += '<th>' + headers[i].name + '</th>';
+            });
+            html += '</tr>';
+            html += '<tbody>';
+            jQuery.each(rows, function (k, r) {
+                jQuery.each(r, function (j) {
+                    html += '<td>' + rows[k][j] + '</td>';
+                });
+
+                html += '</tr>';
+            });
+        } else {
+            html += 'Pas de resultat</td></tr>';
+        }
+        html += '</tbody></table>';
+        return html;
+    }
+
+    function filter_org(orgUnitUID) {
+        console.log("Loading form");
+        console.log('sama_ouID : ' + orgUnitUID);
+
+        var requestURL = '../api/organisationUnits/' + orgUnitUID;
+        $.ajax({
+            type: "GET",
+            url: requestURL,
+            cache: false,
+            success: function (data) {
+                //console.log('data : ' + data.organisationUnitGroups);
+                var orgunitGroups = data.organisationUnitGroups;
+                var isPoste = false;
+                var isCentre = false;
+                var isEPS1 = false;
+                var isEPS2 = false;
+                var isEPS3 = false;
+
+                var cs_louga = false;
+                var cs_ziguinchor = false;
+                var cs_kasnack = false;
+                var RM_Dakar = false;
+
+
+                for (var i = 0; i < orgunitGroups.length; i++) {
+                    //console.log("organisation unit group: " + orgunitGroups[i].id)
+                    if (orgunitGroups[i].id === 'elD2xyvPUxh') { isPoste = true; break; }
+                    else if (orgunitGroups[i].id === 'Wx1Z05p1qwW') { isCentre = true; break; }
+                    else if (orgunitGroups[i].id === 'jPUSczEJX83') { isEPS1 = true; break; }
+                    else if (orgunitGroups[i].id === 'Iz7UikTGvRA') { isEPS2 = true; break; }
+                    else if (orgunitGroups[i].id === 'dwgx6MMoh8m') { isEPS3 = true; break; }
+                    else if (orgUnitUID === 'TaAV28KgmMi') { cs_louga = true; break; }
+                    else if (orgUnitUID === 'XWNWprY9RW0') { cs_ziguinchor = true; break; }
+                    else if (orgUnitUID === 'h7Y8Y6sGth0') { cs_kasnack = true; break; }
+                    //else if (orgUnitUID === 'S9nVJLlzYrK') { RM_Dakar = true; break; }
+
+                }
+
+                if (isPoste) {
+                    $('.ps').show();
+                    $('.cs').hide();
+                    $('.zig').hide();
+                    $('.kas').hide();
+                    $('.lg').hide();
+                    $('.ms').hide();
+                    $('.eps1').hide();
+                    $('.eps2').hide();
+                    $('.eps3').hide();
+                }
+                else if (isCentre) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (isEPS1) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (isEPS2) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (isEPS3) {$('.cs').show();$('.ps').hide();$('.ms').show();$('.lg').hide();$('.zig').hide();$('.kas').hide();}
+                else if (cs_louga) { $('.ps').hide(); $('.cs').hide(); $('.lg').show(); }
+                else if (cs_ziguinchor) { $('.ps').hide(); $('.cs').hide(); $('.zig').show(); }
+                else if (cs_kasnack) { $('.ps').hide(); $('.cs').hide(); $('.kas').show(); }
+                //else if (RM_Dakar) {$('.lg').hide();}
+            }
+        })
+    }
+
+    function makeOrgunitTables(ouIDs, ouGroups, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouIDs: ' + ouIDs + ', ouGroups: ' + ouGroups + ', tableID1: ' + tableID);
+        var requestURL = "../api/orgUnitAnalytics?ou=" + ouIDs + "&ougs=" + ouGroups + "&columns=" + ouGroups;
+
+        $.getJSON(requestURL, function (data) {
+
+            $(tableID1).empty().append(PrintTable(data));
+        });
+    }
+
+    function makeTables(ouID1, period1, dxIDs1, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ', period1: ' + period1 + ', dxIDs1: ' + dxIDs1 + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [{
+                "dimension": "ou",
+                "items": [{ "id": ouID1 }]
+            }],
+            "rows": [{
+                "dimension": "dx",
+                "items": dxIDs1
+            }],
+            "filters": [{
+                "dimension": "pe",
+                "items": [{ "id": period1 }]
+            }],
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_3DM(ouID1, period1, dxIDs1, cLevel, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [{
+                "dimension": "dx",
+                "items": dxIDs1
+            }],
+            "rows": [{
+                "dimension": "ou",
+                "items": cLevel
+            }],
+            "filters": [{
+                "dimension": "pe",
+                "items": [{ "id": period1 }]
+            }],
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_3DM_1(ouID1, period1, dxIDs1, cLevel, tableID1) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [
+                { "dimension": "pe", "items": [{ "id": period1 }] }
+            ],
+            "rows": [
+                { "dimension": "ou", "items": cLevel },
+                { "dimension": "dx", "items": dxIDs1 }
+            ],
+            "filters": [
+
+            ],
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_4DM(ouID1, period1, dxIDs1, cLevel, tableID1, dx4, item4) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [
+                { "dimension": dx4, "items": item4 }
+            ],
+            "rows": [
+                { "dimension": "ou", "items": cLevel },
+                { "dimension": "dx", "items": dxIDs1 }
+            ],
+            "filters": [
+                { "dimension": "pe", "items": [{ "id": period1 }] }
+            ],
+
+            "showColTotals": false,
+            "showRowTotals": true,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+
+    }
+
+    function makeTablesLevel_5DM(ouID1, period1, dxIDs1, cLevel, tableID1, dx4, item4, dx5, item5) {
+        var tableID = $(tableID1).attr('id');
+        console.log('ouID1: ' + ouID1 + ',dxIDs1: ' + dxIDs1 + ' , period1: ' + period1 + ', cLevel: ' + cLevel + ', tableID1: ' + tableID);
+        reportTablePlugin.load([{
+            "columns": [
+                { "dimension": "dx", "items": dxIDs1 },
+                { "dimension": dx4, "items": item4 },
+                { "dimension": dx5, "items": item5 }
+            ],
+            "rows": [
+                { "dimension": "ou", "items": cLevel }
+            ],
+            "filters": [
+                { "dimension": "pe", "items": [{ "id": period1 }] }
+            ],
+
+            "showColTotals": false,
+            "showRowTotals": false,
+            "showColSubTotals": false,
+            "showRowSubTotals": false,
+            "url": serverURL,
+            "el": tableID
+        }]);
+    }
+
+    function idsArray(a) {
+        var b = a.split(";");
+        var c = '[{"id":"' + b.join('"},{"id":"') + '"}]';
+        var d = JSON.parse(c); return d;
+    }
+
+    Ext.onReady(function () {
+
+        var date = dhis2.report.date;
+        console.log("Making report, start date of reporting period is " + date);
+        var LastMonth = moment(date).add('months', 11).format("YYYYMM");
+        var LastMonthPreviousYear = moment(date).subtract('months', 1).format("YYYYMM");
+        console.log("last month " + LastMonth + "; LastMonthPreviousYear " + LastMonthPreviousYear);
+        var periods = dhis2.report.periods;
+        var period = periods[0];
+        var samaSemester2 = (period) + 'S2';
+
+
+        var orgUnit = dhis2.report.organisationUnit; // An object
+        var name = orgUnit.name;
+        var ouID = orgUnit.id;
+        var orgUnitUids = ouID + ';';
+        var orgUnitChildren = dhis2.report.organisationUnitChildren; // An array with child org unit objects
+        var orgUnitLevel = dhis2.report.organisationUnitHierarchy.length;
+        var orgUnitHierarchy = dhis2.report.organisationUnitHierarchy;
+        var level = orgUnitHierarchy.length;
+        var childLevep = "LEVEL-" + (level + 1);
+
+        orgUnitChildren.sort(function compare(a, b) {
+            if (a.name < b.name) return -1;
+            if (a.name > b.name) return 1;
+            return 0;
+        });
+
+        parentChildUids = '{"id": "' + ouID + '"},';
+        for (var i = 0; i < orgUnitChildren.length; i++) {
+            orgUnitUids = orgUnitUids + orgUnitChildren[i].id + ';'; //Loop around to create a variable with the names of the child org unit
+            // parentChildUids = parentChildUids+",{'id':'"+orgUnitChildren[i].id+"'}"; //parent+children {"id": "USER_ORGUNIT"},{'id': orgUnitChildren[i].id}
+            parentChildUids = parentChildUids + '{"id": "' + orgUnitChildren[i].id + '"},';
+        }
+        parentChildUids = '[' + parentChildUids.slice(0, -1) + ']';
+
+        dxOuUids = JSON.parse(parentChildUids);
+        console.log('SAMA ORG ' + orgUnit.name);
+
+        filter_org(ouID);
+
+        // ****** definition des dimensions DX Complétude, Indicateurs, Element de donnée
+
+        // ETAPE 1 TABLES DES INDICATEURS A RECHERCHER DANS DHIS2
+        
+        dxIDs_table1 = [{"id": "AtDu7NRQlqf"},{"id": "DydCWdDeEip"},{"id": "N0pver9STEz"},{"id": "AtDu7NRQlqf"},{"id": "bQxKSLC4Cej"},{"id": "w5dtQSRkM4J"},{"id": "oNzguMcQrux"},{"id": "uIejAFq20oK"},{"id": "MATiKM6Zfop"},{"id": "PWAaIcm1QEs"} ,{"id": "tIcZ6NOy7Tg"}];
+        dxIDs_table2 = [{"id": "ovoiyZctyyY.ACTUAL_REPORTS"},{"id": "ovoiyZctyyY.EXPECTED_REPORTS"},{"id": "ovoiyZctyyY.REPORTING_RATE"}];
+        dxIDs_table3 = [{"id": "uxf4p87mmD1.EXPECTED_REPORTS"} ,{"id": "uxf4p87mmD1.ACTUAL_REPORTS"} ,{"id": "uxf4p87mmD1.REPORTING_RATE"}];
+        dxIDs_table4 = [{"id": "nRwgOybg4EA.EXPECTED_REPORTS"},{"id": "nRwgOybg4EA.ACTUAL_REPORTS"},{"id": "nRwgOybg4EA.REPORTING_RATE"}];
+        dxIDs_table5 = [{"id": "tvonZFnkQuC.EXPECTED_REPORTS"} ,{"id": "tvonZFnkQuC.ACTUAL_REPORTS"} ,{"id": "tvonZFnkQuC.REPORTING_RATE"}];
+        dxIDs_table6 = [{ "id": "OSqzrUaTEMH.ACTUAL_REPORTS"} ,{"id": "OSqzrUaTEMH.EXPECTED_REPORTS"} ,{"id": "OSqzrUaTEMH.REPORTING_RATE"}];
+        dxIDs_table7 = [{"id": "XAPOpDKkOSZ.ACTUAL_REPORTS"} ,{"id": "XAPOpDKkOSZ.EXPECTED_REPORTS"} ,{"id": "XAPOpDKkOSZ.REPORTING_RATE"}];
+        dxIDs_table8 = [{"id": "EwENbvwu76G.ACTUAL_REPORTS"} ,{"id": "EwENbvwu76G.EXPECTED_REPORTS"} ,{"id": "EwENbvwu76G.REPORTING_RATE"}];
+        dxIDs_table9 = [{"id": "sgFWFzeIkEa"},{"id": "Bh5j5UGh908"},{"id": "n97OwCBXweh"},{"id": "gI54aNChLAR"},{"id": "N0pver9STEz"},{"id": "a0niWPJzNZ7"},{"id": "OW8QsFcOrvE"},{"id": "enHYTDppo4e"},{"id": "K72FTSblrlV"},{"id": "vSKgJZCD7YP"},{"id": "rAn1ecHbXPe"},{"id": "jxOMwWtIUYQ"}];
+        dxIDs_table10 = [{"id": "NgdjKbxUlj4"},{"id": "N0pver9STEz"},{"id": "AmB46sMywvM"},{"id": "Ectluyjj2lh"},{"id": "enHYTDppo4e"},{"id": "LrX2gLsZei7"},{"id": "Laoef8KSrTo"}];
+        dxIDs_table11 = [{"id": "LSxTBmPZqeP"},{"id": "SNLWvsmxBBN"},{"id": "WyngNw1iYfG"},{"id": "DL6fxfBNPDf"},{"id": "JR7fAKeUVnX"},{"id": "VyPaJSz8YQP"},{"id": "JZlettE1y4B"},{"id": "brpJRlumkun"}];
+        dxIDs_table12 = [{"id": "Bh5j5UGh908.CWaISx438Jq"},{"id": "m5BvlrbuYbZ"},{"id": "G7BPeHL0uHX"},{"id": "Bh5j5UGh908.MDcoi7tCcPU"},{"id": "xNoPKyRQn4U.HoIsxzhEmia"},{"id": "WlQ4t90zRtY"},{"id": "Bh5j5UGh908.F4D5x6nXi5q"},{"id": "pkbQMiOUvch"},{"id": "Bh5j5UGh908.F4D5x6nXi5q"},{"id": "m5BvlrbuYbZ"},{"id": "gU1rrHH8O4h"},{"id": "gI54aNChLAR.CWaISx438Jq"},{"id": "m5BvlrbuYbZ.HoIsxzhEmia"},{"id": "bkKDVVjiWO0"},{"id": "gI54aNChLAR.MDcoi7tCcPU"},{"id": "xNoPKyRQn4U.HoIsxzhEmia"},{"id": "Ypq7WDxCS4V"},{"id": "gI54aNChLAR.F4D5x6nXi5q"},{"id": "pkbQMiOUvch.HoIsxzhEmia"},{"id": "ME9y2ggSPTq"},{"id": "bQBvSfQTOBh.CWaISx438Jq"},{"id": "ftHwJdg7foW.CWaISx438Jq"},{"id": "ShlNOrwUkcE"},{"id": "bQBvSfQTOBh.MDcoi7tCcPU"},{"id": "ftHwJdg7foW.MDcoi7tCcPU"},{"id": "nbOCf5hV20g"},{"id": "bQBvSfQTOBh.F4D5x6nXi5q"},{"id": "ftHwJdg7foW.F4D5x6nXi5q"},{"id": "cXUXaUogztN"}];
+        dxIDs_table13 = [{"id": "gwZ9WLgsJdg"},{"id": "QbgQo9xT7QA"},{"id": "JSRu2R7cEUB"},{"id": "JGnlVi7vN2j"},{"id": "DydCWdDeEip"}];
+        dxIDs_table14 = [{"id": "u2Zd7KB8JsZ"},{"id": "AFpPWvhtJnH"},{"id": "ATwtwJj5BpF"},{"id": "fYsz2GfysDL"},{"id": "DydCWdDeEip"},{"id": "leWQvB0wGHI"}];
+        dxIDs_table15 = [{"id": "Z30YyOByqCX"},{"id": "wKSbe61ond1.HoIsxzhEmia"},{"id": "TxR5VusTl4e"},{"id": "gwZ9WLgsJdg"},{"id": "My5WbJTKR2W.HoIsxzhEmia"},{"id": "iu48coq9j7o"},{"id": "QbgQo9xT7QA"},{"id": "My5WbJTKR2W.HoIsxzhEmia"},{"id": "iu48coq9j7o"},{"id": "DUHzSxdtf4e"},{"id": "Sm8NgdzCjnB"},{"id": "NwQshLe2uoC"},{"id": "lWPMmzkFbZT"},{"id": "qu10eaK6YDO"},{"id": "MUaU8SI1HIz"},{"id": "YySr6hT7Vpz"},{"id": "MKXbwuJl0MW"},{"id": "PPGA3FvIwQQ"},{"id": "zZ2MuCwwbwy"},{"id": "wKSbe61ond1.HoIsxzhEmia"},{"id": "eHGdvVZktdW"},{"id": "u2Zd7KB8JsZ"},{"id": "My5WbJTKR2W.HoIsxzhEmia"},{"id": "XydsZ04cfrg"},{"id": "AFpPWvhtJnH"},{"id": "DiqURyAqlXZ.HoIsxzhEmia"},{"id": "qTcPE50suWX"},{"id": "fjwLBbr835B.CWaISx438Jq"},{"id": "HBivDN5GxeB.CWaISx438Jq"},{"id": "TC0DH8gm47Y"},{"id": "fjwLBbr835B.MDcoi7tCcPU"},{"id": "HBivDN5GxeB.MDcoi7tCcPU"},{"id": "i1Rb9uYEqBZ"},{"id": "fjwLBbr835B.F4D5x6nXi5q"},{"id": "HBivDN5GxeB.F4D5x6nXi5q"},{"id": "jVD8tuqX19k"}];
+        dxIDs_table16 = [{"id": "RL5KZGm5zcb"},{"id": "i1fJYpDp9nG"},{"id": "VXWRJsy0Yyk"},{"id": "YQsqIMXr3NA"},{"id": "oKP85jkwk72"},{"id": "c8xOVNAexhq"},{"id": "uANT2r2VE6m"}];
+        dxIDs_table17 = [{"id": "IOvVumpvlYb"},{"id": "bQxKSLC4Cej"},{"id": "Ptj7h95GZcm"}];
+        dxIDs_table18 = [{"id": "VifY5UgChPi"},{"id": "uIejAFq20oK"},{"id": "l27lg2BdVQw"}];
+        dxIDs_table19 = [{"id": "Bsl0jhNxbtr"},{"id": "uIejAFq20oK"},{"id": "oUoxzVD7NXr"}];
+        dxIDs_table20 = [{"id": "rOPW3HljYWu"},{"id": "FP9dkUczkYg"},{"id": "lsYVQYs0F42"},{"id": "VlJS0XpTRhu"},{"id": "yrcMB13DPiP"},{"id": "wC4tlQrWObu"},{"id": "weta7tk2fj7"},{"id": "FP9dkUczkYg"},{"id": "TOpxOeqUFUY"},{"id": "HP1Kutxn0uV"},{"id": "yrcMB13DPiP"},{"id": "obqv38lLAsF"}];
+        dxIDs_table21 = [{"id": "eNKvc9BE3ad"},{"id": "wKSbe61ond1.HoIsxzhEmia"},{"id": "pgb6pFbX3S1"},{"id": "TWB8G9vYTl0"},{"id": "My5WbJTKR2W.HoIsxzhEmia"},{"id": "ZTgLswdkxg5"},{"id": "Kl0ZPw6Mrl0"},{"id": "MATiKM6Zfop.HoIsxzhEmia"},{"id": "gpiaekH0J0r"},{"id": "vUtXjmcYjfa"},{"id": "PWAaIcm1QEs.HoIsxzhEmia"},{"id": "AunYGlKN4rr"},{"id": "NnAdzY1Fhzw"},{"id": "DiqURyAqlXZ.HoIsxzhEmia"},{"id": "nJE8YrSh1r0"},{"id": "EIsZ30O6lZW"},{"id": "tIcZ6NOy7Tg.HoIsxzhEmia"},{"id": "mVNaEuEFSVL"}];
+        dxIDs_table22 = [{"id": "aZHpH1hLhku"},{"id": "ftHwJdg7foW.CWaISx438Jq"},{"id": "vRR3PYDzR0A"},{"id": "Jdk3q1TXPNt"},{"id": "ftHwJdg7foW.MDcoi7tCcPU"},{"id": "nZGbyfHQjlX"},{"id": "tqI4ESj4BSw"},{"id": "ftHwJdg7foW.F4D5x6nXi5q"},{"id": "wJJ1gpdz86D"},{"id": "XRwCf8MvEMg.CWaISx438Jq"},{"id": "ftHwJdg7foW.CWaISx438Jq"},{"id": "BE81zMvETeg"},{"id": "XRwCf8MvEMg.MDcoi7tCcPU"},{"id": "ftHwJdg7foW.MDcoi7tCcPU"},{"id": "HumQMxHvDEg"},{"id": "XRwCf8MvEMg.F4D5x6nXi5q"},{"id": "ftHwJdg7foW.F4D5x6nXi5q"},{"id": "dlIO3UCkNJl"}];
+        dxIDs_table23 = [{"id": "OW8QsFcOrvE.CWaISx438Jq"},{"id": "enHYTDppo4e.CWaISx438Jq"},{"id": "uLPkhAGZsWb"},
+        {"id": "OW8QsFcOrvE.MDcoi7tCcPU"},{"id": "enHYTDppo4e.MDcoi7tCcPU"},{"id": "y7pYuz6sAKS"},{"id": "OW8QsFcOrvE.F4D5x6nXi5q"},{"id": "enHYTDppo4e.F4D5x6nXi5q"},{"id": "I149BmYcd6K"},{"id": "NgdjKbxUlj4.CWaISx438Jq"},{"id": "m5BvlrbuYbZ.HoIsxzhEmia"},{"id": "NP6EYDcPs8K"},{"id": "NgdjKbxUlj4.MDcoi7tCcPU"},{"id": "xNoPKyRQn4U.HoIsxzhEmia"},{"id": "oteOE6GKu4W"},{"id": "NgdjKbxUlj4.F4D5x6nXi5q"},{"id": "pkbQMiOUvch.HoIsxzhEmia"},{"id": "t0hIO4Tz2CL"},{"id": "KUhYYr4Pwdv.CWaISx438Jq"},{"id": "KF6sO4sk5F2.CWaISx438Jq"},{"id": "aE9aSdS5Eis"},{"id": "KUhYYr4Pwdv.MDcoi7tCcPU"},{"id": "KF6sO4sk5F2.MDcoi7tCcPU"},{"id": "QbS5CdCL2t5"},{"id": "KUhYYr4Pwdv.F4D5x6nXi5q"},{"id": "KF6sO4sk5F2.F4D5x6nXi5q"},{"id": "P654EDlG9PS"},{"id": "X2fWlMhhXJD.MDcoi7tCcPU"},{"id": "KF6sO4sk5F2.MDcoi7tCcPU"},{"id": "WLa3G4tto0s"},{"id": "X2fWlMhhXJD.CWaISx438Jq"},{"id": "KF6sO4sk5F2.CWaISx438Jq"},{"id": "eOMGIMh0EBt"},{"id": "X2fWlMhhXJD.F4D5x6nXi5q"},{"id": "KF6sO4sk5F2.F4D5x6nXi5q"},{"id": "aN2dmS5tjvU"},{"id": "HBivDN5GxeB.CWaISx438Jq"},{"id": "m5BvlrbuYbZ.HoIsxzhEmia"},{"id": "GmgXNBghhKv"},{"id": "HBivDN5GxeB.MDcoi7tCcPU"},{"id": "OpxVdkmsriy.HoIsxzhEmia"},{"id": "T6nnIu4VNjT"},{"id": "HBivDN5GxeB.F4D5x6nXi5q"},{"id": "pkbQMiOUvch.HoIsxzhEmia"},{"id": "y2jk2TxFsBg"},{"id": "ake7SzhjXnD"},{"id": "xyKk2ioFhDV"},{"id": "Z9TV8X1ENGd"},{"id": "N0nM5mjEDan"},{"id": "H1uukuHDtlu"},{"id": "fXRh4wx27tK"},{"id": "vd4ctDigMgT"},{"id": "vStmjuXxFqi"},{"id": "G3IMicRi8XW"},{"id": "jNHvlanK8tt"},{"id": "LSxTBmPZqeP"},{"id": "NBDxeA0HmaJ"},{"id": "l1sLI1rmh05"},{"id": "LSxTBmPZqeP"},{"id": "eL2qp3OqIjm"},{"id": "GvvOMaQFKXB"},{"id": "LSxTBmPZqeP"},{"id": "sqzcjK8izSY"},{"id": "Ectluyjj2lh.CWaISx438Jq"},{"id": "Ectluyjj2lh.CWaISx438Jq"},{"id": "WAQrivLW3tu"},{"id": "y4XQFbY2Nut"},{"id": "Ectluyjj2lh.MDcoi7tCcPU"},{"id": "ueewlNXL2qO"},{"id": "GrfjY5k2NpI"},{"id": "Ectluyjj2lh.F4D5x6nXi5q"},{"id": "AfCDepQ47PL"},{"id": "GB8BoUQLkbE"},{"id": "tBQGbUoMFpb.CWaISx438Jq"},{"id": "YeV7G0bPHJo.CWaISx438Jq"},{"id": "DyUGMWRJynv"},{"id": "tBQGbUoMFpb.MDcoi7tCcPU"},{"id": "YeV7G0bPHJo.MDcoi7tCcPU"},{"id": "LqflwfLBUXg"},{"id": "tBQGbUoMFpb.F4D5x6nXi5q"},{"id": "YeV7G0bPHJo.F4D5x6nXi5q"},{"id": "FuF3MLLwjuL"},{"id": "Lm9mOcHZMly"},{"id": "BHzCA42gG2u"},{"id": "eJlAuoe5FGR"},{"id": "P2mtAtOWXyn"},{"id": "BHzCA42gG2u"},{"id": "d6Spy5GbZBE"},{"id": "iv2cA3RW7yX"},{"id": "BHzCA42gG2u"},{"id": "Qzv1EvnHcmM"},{"id": "ElGjyDd51q7"},{"id": "E4NSUgb3X7p"},{"id": "ehYVS2LRaHO"},{"id": "UcguWNi2Lq2"},{"id": "E4NSUgb3X7p"},{"id": "boa7pFpHdXb"},{"id": "Q5b4uXETQzS"},{"id": "E4NSUgb3X7p"},{"id": "rhFTmMFRY5O"}];
+
+        // ****** fin definition
+
+        //***************************************//
+        var year = period.substr(0, 4);
+        $("#period").html('Ann&eacute;e: ' + year);
+        //$("#period").html(period);
+        console.log("period: " + period + " year: " + year);
+        $("#orgUnit").html(orgUnit.name);
+        $("#orgUnitAndPeriod").html(orgUnit.name + ' - ' + period);
+        //**************************************//
+
+        // VARIABLES AUTRES DIMENSIONS
+
+        var AGE_SR = ""
+        var optionsAgeSR = [
+            {"id" : ""}
+        ]
+
+        //FIN VARIABLES AUTRES DIMENSIONS
+
+        // ETAPE 2 APPEL DES FONCTIONS
+        makeTablesLevel_3DM(ouID, period, dxIDs_table1, dxOuUids, table1);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table2, dxOuUids, table2);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table3, dxOuUids, table3);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table4, dxOuUids, table4);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table5, dxOuUids, table5);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table6, dxOuUids, table6);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table7, dxOuUids, table7);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table8, dxOuUids, table8);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table9, dxOuUids, table9);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table10, dxOuUids, table10);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table11, dxOuUids, table11);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table12, dxOuUids, table12);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table13, dxOuUids, table13);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table14, dxOuUids, table14);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table15, dxOuUids, table15);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table16, dxOuUids, table16);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table17, dxOuUids, table17);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table18, dxOuUids, table18);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table19, dxOuUids, table19);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table20, dxOuUids, table20);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table21, dxOuUids, table21);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table22, dxOuUids, table22);
+        makeTablesLevel_3DM(ouID, period, dxIDs_table23, dxOuUids, table23);
+
+        // FIN APPEL FONCTIONS
+
+        setTimeout(function () { exponentials(); }, 3000);
+        setTimeout(function () { exponentials(); }, 10000);
+        setTimeout(function () { exponentials(); }, 30000);
+        setTimeout(function () { exponentials(); }, 30000);
+        setTimeout(function () { exponentials(); }, 50000);
+        setTimeout(function () { exponentials(); }, 30000);
+        setTimeout(function () { exponentials(); }, 50000);
+        setTimeout(function () { exponentials(); }, 70000);
+        setTimeout(function () { exponentials(); }, 70000);
+        setTimeout(function () { exponentials(); }, 70000);
+        setTimeout(function () { exponentials(); }, 70000);
+
+    });
+
+
+    function exponentials() {
+        var expReg = new RegExp("[0-9]{1}\.[0-9]*E[0-9]{1,3}");
+        $("td").each(function () {
+            if (expReg.test($(this)[0].innerHTML)) {
+                $(this)[0].innerHTML = parseFloat($(this)[0].innerHTML);
+            }
+        });
+        console.log("Fixed exponentials");
+    }
+
+</script>
+
+
+ <!-- ETAPE 3 Partie Vue du rapport standard  -->
+<div class="container-fluid">
+    <!-- LIGNE FIXE TITRE ET LOGOS  -->
+    <div class="row">
+        <div class="col-sm-12">
+            <header class="header">
+                <div class="row border border-primary m-0" id="border-title">
+                    <div class="col-sm-2 mt-2 mb-2">
+                        <img alt="" height="55"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/langfr-225px-Flag_of_Senegal.svg.png"
+                            style="float: left;" width="80" />
+                    </div>
+                    <div class="col-sm-8">
+                        <p class="samaTitlePrincipal mt-2">
+                            Rapport annuel des indicateurs de la DSME
+                        </p>
+                        <span class="samaTitlePrincipal" id="orgUnitAndPeriod"></span>
+                    </div>
+                    <div class="col-sm-2 mt-2 mb-2">
+                        <img alt="" height="55"
+                            src="https://www.developmentaid.org/files/organizationLogos/ministry-of-health-and-social-action-of-senegal-ministere-de-la-sante-et-de-laction-sociale-143684.jpg"
+                            style="float: right;" width="80" />
+                    </div>
+                    <div class="col-sm-20">
+                        <img alt="" height="120" src="https://caravanes.santeenentreprise.com/wp-content/uploads/2021/05/DME-Senegal.png" width="200" /> 
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <br />
+    <!-- FIN LIGNE FIXE TITRE ET LOGOS  -->
+
+
+    <div class="row">
+
+        <!--POPULATION CIBLE DSME -->
+        <section class="accordion">
+            <input type="checkbox" name="collapse2" id="handle2">
+            <h2 class="handle">
+                <label for="handle2" class="samaTitle">POPULATION CIBLE DSME</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table1'></div>
+            </div>
+        </section>
+
+         <!--COMPLÉTUDE DES RAPPORTS -->
+         <section class="accordion">
+            <input type="checkbox" name="collapse3" id="handle3">
+            <h2 class="handle">
+                <label for="handle3" class="samaTitle">COMPLÉTUDE DES RAPPORTS</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table2'></div>
+                <div class='section' id='table3'></div>
+                <div class='section' id='table4'></div>
+                <div class='section' id='table5'></div>
+                <div class='section' id='table6'></div>
+                <div class='section' id='table7'></div>
+                <div class='section' id='table8'></div>
+                
+            </div>
+        </section>
+
+        <!--SANTE DE LA MERE ET DU NOUVEAU NE -->
+        <section class="accordion">
+            <input type="checkbox" name="collapse4" id="handle4">
+            <h2 class="handle">
+                <label for="handle4" class="samaTitle">SANTE DE LA MERE ET DU NOUVEAU NE</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table9'></div>
+                <div class='section' id='table10'></div>
+                <div class='section' id='table11'></div>
+                <div class='section' id='table12'></div>
+                <div class="section" id="table23"></div>
+               
+            </div>
+        </section>
+
+         <!--PLANIFICATION FAMILIALE-->
+         <section class="accordion">
+            <input type="checkbox" name="collapse5" id="handle5">
+            <h2 class="handle">
+                <label for="handle5" class="samaTitle">PLANIFICATION FAMILIALE</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table13'></div>
+                <div class='section' id='table14'></div>
+                <div class='section' id='table15'></div>
+                
+            </div>
+        </section>
+
+        
+         <!--SANTE DE L’ENFANT/ PCIME -->
+         <section class="accordion">
+            <input type="checkbox" name="collapse6" id="handle6">
+            <h2 class="handle">
+                <label for="handle6" class="samaTitle">SANTE DE L’ENFANT/ PCIME</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table16'></div>
+                <div class='section' id='table17'></div>
+                <div class='section' id='table18'></div>
+                <div class='section' id='table19'></div>
+                
+                    
+                
+                
+               
+            </div>
+        </section>
+
+        <!--SANTE DE L’ENFANT/ NUTRITION -->
+        <section class="accordion">
+            <input type="checkbox" name="collapse7" id="handle7">
+            <h2 class="handle">
+                <label for="handle7" class="samaTitle">SANTE DE L’ENFANT/ NUTRITION</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table20'></div>
+                <div class="section" id="table22"></div>
+                
+                
+               
+            </div>
+        </section>
+
+          <!--IST -->
+          <section class="accordion">
+            <input type="checkbox" name="collapse8" id="handle8">
+            <h2 class="handle">
+                <label for="handle8" class="samaTitle">IST</label>
+            </h2>
+            <div class="content">
+                <div class='section' id='table21'></div>
+                
+                
+                
+               
+            </div>
+        </section>
+
+    </div>
+
+</div>

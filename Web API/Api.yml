@@ -23,4 +23,22 @@ columns	No	Dimensions to use as columns for table layout.	Any dimension (must be
 rows	No	Dimensions to use as rows for table layout.	Any dimension (must be query dimension)
 
 #ANALYTICX
-/api/25/analytics?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&filter=pe:2014Q1;2014Q2&filter=ou:O6uvpzGd5pu;lc3eMKXaEfw
+/api/25/analytics?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&filter=pe:2014Q1&filter=ou:O6uvpzGd5pu
+
+#DATASETS
+/api/dataValueSets.json?dataSet=cRQ4RoqQeyY&period=2023&orgUnit=sKu72VXfl8e&dataElementGroup=GXeU4nyVqBd
+
+#USERS
+api/users.json?filter=id:in:[K3MaQMxNdrc,ckJHjuYeo1E,L5C6tEq1Tm1,tHWPPAZV06L,SSy7wu78uAF,HOTWbaFwM7y,tUhOBbLxA4M]&fields=*,!access,userCredentials[*,!access]
+
+#ORGUNITS
+https://senegal.dhis2.org/dhis/api/organisationUnits.json?fields=name&filter=path:like:QbYFSeaWGLV&filter=level:eq:4&filter=organisationUnitGroups.id:eq:elD2xyvPUxh
+
+#TrackedEntityInstances
+/api/trackedEntityInstances.json?filter=VSLlYSxLisA:EQ:101102F4322&ouMode=ALL&program=Y5Nj7otuQH2&fields=*
+
+/api/trackedEntityInstances.json?filter=f7NjJ7llsNQ:EQ:483&ouMode=ALL&program=MVcHc8JFnIn&fields=*
+
+https://tracker.minsante.sn/dev1/api/categoryOptions?filter=name:ilike:P1%20A1%20AS7
+
+https://tracker.minsante.sn/tracker/api/users.json?fields=name,surname,email,organisationUnits[name]&filter=userGroups.id:eq:s0FQnlIbbmP&filter=organisationUnits.id:in:[C45N74moRRQ,iHtSpT60CMh,Lcl9qLg1n9X,dnxpo0yUmGZ,ZAZmZyvWDra,WVLP0eDciNr,ss4G96vxCxk,Dk91udK9Sa0,hUEBvQwp9mV,ugxBtzGpNKk,bMH2zxnqxgW,AlNvdurDTo0,DxvVP2f3cts,xKNj5oepVR9,XegrfqLcJcZ,jn2iJMzKuY0,OtM60WVfhvs]

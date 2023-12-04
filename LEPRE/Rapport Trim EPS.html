@@ -3,592 +3,526 @@
     "name": "Rapport Trim Lepre EPS",
     "version": "1.0",
     "description": "Formulaire Trimestriel Lepre"
- -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/floatthead/1.4.0/jquery.floatThead-slim.min.js"></script>
-<script>
+ --><script src="//cdnjs.cloudflare.com/ajax/libs/floatthead/1.4.0/jquery.floatThead-slim.min.js"></script><script>
     /* 
     Fonction qui permet la tabulation
 */
-    $(function () {
+$(function () {
         $("#tabs").tabs();
     });
 </script>
+<style type="text/css">input {
+        width: 45px;
+    }
+</style>
 <div id="tabs">
-    <ul wfd-id="6">
-        <li wfd-id="8"><a href="#Sec1">Prise en charge des cas compliques</a></li>
-        <li wfd-id="8"><a href="#Sec2">PRIP</a></li>
-        <li wfd-id="7"><a href="#Sec3">Donn&eacute;es labo EPS (Biopsie)</a></li>
-    </ul>
+<ul wfd-id="6">
+	<li wfd-id="8"><a href="#Sec1">Prise en charge des cas compliques</a></li>
+	<li wfd-id="8"><a href="#Sec2">PRIP</a></li>
+	<li wfd-id="7"><a href="#Sec3">Donn&eacute;es labo EPS (Biopsie)</a></li>
+</ul>
 
-    <div id="Sec1">
-        <table style="border:1px solid #000000">
-            <colgroup width="229">
-            </colgroup>
-            <colgroup span="4" width="163">
-            </colgroup>
-            <colgroup span="6" width="128">
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td align="center" bgcolor="#B4C7DC" height="59" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Motifs d&#39;hospitalisation</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Nombre Ancien cas de L&egrave;pre hospitalis&eacute; durant le
-                                    trimestre(a)</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Nombre Nouveau cas de L&egrave;pre Hospitalis&eacute; durant le
-                                    trimestre(b)</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Total cas hospitalis&eacute;s( a+b)</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Dur&eacute;e moyenne de l&#39;hospitalisation (jour)</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" colspan="5"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">issue de l&#39;hospitalisation</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Observations</font>
-                            </font>
-                        </b></td>
-                </tr>
-                <tr>
-                    <td align="center" bgcolor="#B4C7DC"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Nombre de cas Gu&eacute;ri</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Nombre de cas stable</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Nombre cas de transfert sortant</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Nombre total de d&eacute;c&eacute;s</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">Autres</font>
-                            </font>
-                        </b></td>
-                </tr>
-                <tr>
-                    <td align="left" height="46"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">REACTION DE TYPE 1 (REACTIONS REVERSES )</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">REACTION DE TYPE 2 (ENL)</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">NEVRITE </font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="48"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">MAUX PERFORANTS PLANTAIRES</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="48"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">TOXIDERMIE (ALLERGIE A LA DDS)</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">AMPUTATION</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">DECOMPRESSION NERVEUSE</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">AUTRES : ( &agrave; pr&eacute;ciser)</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" bgcolor="#B4C7DC" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">TOTAL</font>
-                        </b></td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div id="Sec1">
+<table style="border:1px solid #000000">
+	<colgroup width="229">
+	</colgroup>
+	<colgroup span="4" width="163">
+	</colgroup>
+	<colgroup span="6" width="128">
+	</colgroup>
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" height="59" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Motifs d&#39;hospitalisation</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Nombre Ancien cas de L&egrave;pre hospitalis&eacute; durant le trimestre(a)</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Nombre Nouveau cas de L&egrave;pre Hospitalis&eacute; durant le trimestre(b)</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Total cas hospitalis&eacute;s( a+b)</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Dur&eacute;e moyenne de l&#39;hospitalisation (jour)</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="5" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">issue de l&#39;hospitalisation</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Observations</font> </font> </b></td>
+		</tr>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Nombre de cas Gu&eacute;ri</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Nombre de cas stable</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Nombre cas de transfert sortant</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Nombre total de d&eacute;c&eacute;s</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Autres</font> </font> </b></td>
+		</tr>
+		<tr>
+			<td align="left" height="46" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">REACTION DE TYPE 1 (REACTIONS REVERSES )</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">REACTION DE TYPE 2 (ENL)</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">NEVRITE </font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="48" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">MAUX PERFORANTS PLANTAIRES</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="48" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">TOXIDERMIE (ALLERGIE A LA DDS)</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">AMPUTATION</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">DECOMPRESSION NERVEUSE</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">AUTRES : ( &agrave; pr&eacute;ciser)</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" bgcolor="#B4C7DC" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">TOTAL</font> </b></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
 
-    <div id="Sec2">
-        <table style="border:1px solid #000000">
-            <colgroup width="229">
-            </colgroup>
-            <colgroup span="4" width="163">
-            </colgroup>
-            <tbody>
-                <tr>
-                    <td align="center" bgcolor="#B4C7DC" height="51" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">MOTIFS DE CONSULTATION</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">NOUVEAUX CAS. DURANT TRIMESTRE</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">ANCIENS CAS. DURANT TRIMESTRE</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">TOTAL CAS DURANT TRIMESTRE</font>
-                            </font>
-                        </b></td>
-                    <td align="center" bgcolor="#B4C7DC" rowspan="2"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <b>
-                            <font face="Liberation Serif">
-                                <font color="#000000">OBSERVATIONS</font>
-                            </font>
-                        </b></td>
-                </tr>
-                <tr>
-                </tr>
-                <tr>
-                    <td align="left" height="48"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">REACTION DE TYPE 2 (ENL)</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">NEVRITE </font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="48"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">MAUX PERFORANTS PLANTAIRES</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="48"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">TOXIDERMIE (ALLERGIE A LA DDS)</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td align="left" height="26"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        <font face="Liberation Serif">AUTRES : ( &agrave; pr&eacute;ciser)</font>
-                    </td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                    <td align="left"
-                        style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">
-                        &nbsp;</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<table style="border:1px solid #000000; margin-top: 30px;">
+	<colgroup width="229">
+	</colgroup>
+	<colgroup span="4" width="163">
+	</colgroup>
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" height="51" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">MOTIFS DE CONSULTATION</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">NOUVEAUX CAS. DURANT TRIMESTRE</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">ANCIENS CAS. DURANT TRIMESTRE</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">TOTAL CAS DURANT TRIMESTRE</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">OBSERVATIONS</font> </font> </b></td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td align="left" height="48" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">REACTION DE TYPE 2 (ENL)</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">NEVRITE </font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="48" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">MAUX PERFORANTS PLANTAIRES</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="48" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">TOXIDERMIE (ALLERGIE A LA DDS)</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">AUTRES : ( &agrave; pr&eacute;ciser)</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
 
-    <div id="Sec3">
+<div id="Sec2">
+<table style="border:1px solid #000000">
+	<colgroup width="229">
+	</colgroup>
+	<colgroup span="4" width="163">
+	</colgroup>
+	<colgroup span="7" width="128">
+	</colgroup>
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" height="78" rowspan="3" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Pr&eacute;vention des invalidit&eacute;s et r&eacute;habilitation concernant les patients actuels et ant&eacute;rieurs </font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="5" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">pauci-bacillaire</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="5" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">multi- bacillaire</font> </b></td>
+		</tr>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">HOMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">FEMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">TOTAL</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">HOMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">FEMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">TOTAL</font> </b></td>
+		</tr>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Total des patients trait&eacute;s avec des st&eacute;ro&iuml;des au cours du trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-BiBCsnvweJD-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-CmwKT524qwo-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-nmYOKAF19QB-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-YNTpmn0HGee-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fwhHJ0G89Kb-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients traites avec des steroides au cours du trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Total des patients ayant re&ccedil;u une chirurgie reconstructive au cours du trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-BiBCsnvweJD-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-CmwKT524qwo-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-nmYOKAF19QB-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-YNTpmn0HGee-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="hFSbnY9xZmp-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients ayant recu une chirurgie reconstructive au cours du trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="92" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de cas sous prise en charge m&eacute;dicale en raison d&#39;une incapacit&eacute;, d&#39;une r&eacute;action ou de toute autre complication imputable &agrave; la l&egrave;pre.</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="BT4DE0d0loF-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de cas sous prise en charge medicale en raison d'une incapacite Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="27" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de PAL qui ont re&ccedil;u aide sociale </font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="kb8pww6kDdr-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui ont recu aide sociale Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de PAL qui g&eacute;n&egrave;re un revenu gr&acirc;ce aux activit&eacute;s de r&eacute;adaptation &eacute;conomique </font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="R9nNyy5Ubnb-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de PAL qui genere un revenu grece aux activites de readaptation economique Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de PALs ayant particip&eacute;s &agrave; des groupes d&#39;autosoins actifs </font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="GeWDToVe4Wv-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de PALs ayant participes e des groupes d'autosoins actifs Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Total des patients form&eacute;s en auto-soins au cours du trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-BiBCsnvweJD-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-CmwKT524qwo-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-nmYOKAF19QB-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-YNTpmn0HGee-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="fV9jZ2tqO96-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients formes en auto-soins au cours du trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de patients ayant b&eacute;n&eacute;fici&eacute;s de chaussures adapt&eacute;es durant le trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LbSOYOpLpqs-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies de chaussures adaptees durant le trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de patients ayant b&eacute;n&eacute;fici&eacute;s d&#39;une proth&eacute;se tibiale </font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="TlUx0Kn9UwR-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant beneficies d'une prothese tibiale Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Total des patients ayant un (des) ulc&egrave;re(s) plantaire(s) MPP pdt le trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-BiBCsnvweJD-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-CmwKT524qwo-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-nmYOKAF19QB-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-YNTpmn0HGee-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="tOioMm48P9o-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Total des patients ayant un (des) ulcere(s) plantaire(s) MPP pdt le trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="73" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de patients examin&eacute;s pour &eacute;valuer leur &eacute;tat d&#39;incapacit&eacute; &agrave; la fin du traitement durant le trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mvk7QXWs5PI-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients examines pour evaluer leur etat d'incapacite a la fin du traitement durant le trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="73" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de patients ayant d&eacute;velopp&eacute; de nouvelles incapacit&eacute;s au cours du traitement durant le trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="LQQ2WPUFY8X-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe de nouvelles incapacites au cours du traitement durant le trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="50" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de patients ayant d&eacute;velopp&eacute; une r&eacute;action durant le trimestre</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xKli29uD2Vg-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xKli29uD2Vg-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left"><input id="xKli29uD2Vg-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xKli29uD2Vg-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xKli29uD2Vg-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xKli29uD2Vg-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xKli29uD2Vg-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xKli29uD2Vg-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" height="52" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombre de patients ayant d&eacute;velopp&eacute; une r&eacute;action durant le trimestre </font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">TYPE 1</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="IkH7j67NS1Z-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type1 Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">TYPE 2</font></td>
+			<td align="left" bgcolor="#000000" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" bgcolor="#000000" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" bgcolor="#000000" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" bgcolor="#000000" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" bgcolor="#000000" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="MxzIPEhApaa-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="MxzIPEhApaa-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="MxzIPEhApaa-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="MxzIPEhApaa-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombre de patients ayant developpe une reaction durant le trimestre Type2 Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</div>
 
-    </div>
+<div id="Sec3">
+<table style="border:1px solid #000000">
+	<colgroup span="4" width="163">
+	</colgroup>
+	<colgroup span="8" width="128">
+	</colgroup>
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" height="78" rowspan="3" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif"><font color="#000000">Echantillons</font> </font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="5" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">Pauci-bacillaire</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="5" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">Multi- bacillaire</font> </b></td>
+		</tr>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">HOMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">FEMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">TOTAL</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">HOMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" colspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">FEMMES</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" rowspan="2" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">TOTAL</font> </b></td>
+		</tr>
+		<tr>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&lt; 15 ans</font> </b></td>
+			<td align="center" bgcolor="#B4C7DC" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Liberation Serif">&ge; 15 ans</font> </b></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="26" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombres de biopsie r&eacute;alis&eacute;s</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombres de biopsie realises Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombres de biopsie realises Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombres de biopsie realises Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombres de biopsie realises Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombres de biopsie realises Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombres de biopsie realises Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombres de biopsie realises Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombres de biopsie realises Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="indicatorINKMMzf7gYV" indicatorid="INKMMzf7gYV" name="indicator" readonly="readonly" title="Total Nombres de biopsie réalisés pauci-bacillaire (Lepre)" value="[ Total Nombres de biopsie réalisés pauci-bacillaire (Lepre) ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombres de biopsie realises Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombres de biopsie realises Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombres de biopsie realises Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombres de biopsie realises Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombres de biopsie realises Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombres de biopsie realises Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="lhlhYWK2aSc-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombres de biopsie realises Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombres de biopsie realises Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="indicatorGo4p28wqNWr" indicatorid="Go4p28wqNWr" name="indicator" readonly="readonly" title="Total Nombres de biopsie realises multi- bacillaire (Lepre)" value="[ Total Nombres de biopsie realises multi- bacillaire (Lepre) ]" /></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="27" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombres de biopsie positifs</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombres de biopsie positifs Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombres de biopsie positifs Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombres de biopsie positifs Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombres de biopsie positifs Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="indicatorN72bNYjOKN6" indicatorid="N72bNYjOKN6" name="indicator" readonly="readonly" title="Total Nombres de biopsie positifs pauci-bacillaire (Lepre)" value="[ Total Nombres de biopsie positifs pauci-bacillaire (Lepre) ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombres de biopsie positifs Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombres de biopsie positifs Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombres de biopsie positifs Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qi3aWqymkIO-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombres de biopsie positifs Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombres de biopsie positifs Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="indicatorzDTkgFKc9Qj" indicatorid="zDTkgFKc9Qj" name="indicator" readonly="readonly" title="Total Nombres de biopsie positifs multi- bacillaire (Lepre)" value="[ Total Nombres de biopsie positifs multi- bacillaire (Lepre) ]" /></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="2" height="27" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Liberation Serif">Nombres de biopsie n&eacute;gatifs</font></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-nsxCjmTGUFL-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Paucibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombres de biopsie negatifs Paucibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-BiBCsnvweJD-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Paucibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombres de biopsie negatifs Paucibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-CmwKT524qwo-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Paucibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombres de biopsie negatifs Paucibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-nmYOKAF19QB-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Paucibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombres de biopsie negatifs Paucibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="indicatornr47hlS0kyR" indicatorid="nr47hlS0kyR" name="indicator" readonly="readonly" title="Total Nombres de biopsie négatifs pauci-bacillaire(Lepre)" value="[ Total Nombres de biopsie négatifs pauci-bacillaire(Lepre) ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-NqDkgu2Zfy0-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Multibacillaire, M, &lt; 15 ans" value="[ Lepr-Nombres de biopsie negatifs Multibacillaire, M, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-D0cY9I3oqdD-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Multibacillaire, M, ≥ 15 ans" value="[ Lepr-Nombres de biopsie negatifs Multibacillaire, M, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-YNTpmn0HGee-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Multibacillaire, F, &lt; 15 ans" value="[ Lepr-Nombres de biopsie negatifs Multibacillaire, F, &lt; 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="T46ksmtDFSq-RUR5N0LNKYA-val" name="entryfield" title="Lepr-Nombres de biopsie negatifs Multibacillaire, F, ≥ 15 ans" value="[ Lepr-Nombres de biopsie negatifs Multibacillaire, F, ≥ 15 ans ]" /></td>
+			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="indicatorZD4v91AJ5kg" indicatorid="ZD4v91AJ5kg" name="indicator" readonly="readonly" title="Total Nombres de biopsie négatifs multi- bacillaire (Lepre)" value="[ Total Nombres de biopsie négatifs multi- bacillaire (Lepre) ]" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
 </div>

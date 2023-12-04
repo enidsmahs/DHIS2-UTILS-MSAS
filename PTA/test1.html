@@ -1,0 +1,60 @@
+<style>
+    .step {
+        display: none;
+    }
+
+    .step:first-child {
+        display: block;
+    }
+</style>
+
+<form id="form">
+    <div class="step">
+        <h2>Étape 1</h2>
+        <input type="text" name="name" placeholder="Nom">
+        <button type="button" onclick="nextStep()">Suivant</button>
+    </div>
+
+    <div class="step">
+        <h2>Étape 2</h2>
+        <input type="email" name="email" placeholder="Email">
+        <button type="button" onclick="previousStep()">Précédent</button>
+        <button type="button" onclick="nextStep()">Suivant</button>
+    </div>
+
+    <div class="step">
+        <h2>Étape 3</h2>
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="button" onclick="previousStep()">Précédent</button>
+        <button type="submit">Envoyer</button>
+    </div>
+</form>
+
+
+<script>
+    let currentStep = 0;
+    const steps = document.getElementsByClassName('step');
+
+    function showStep(step) {
+        if (step >= 0 && step < steps.length) {
+            Array.from(steps).forEach((s, index) => {
+                s.style.display = index === step ? 'block' : 'none';
+            });
+            currentStep = step;
+        }
+    }
+
+    function nextStep() {
+        showStep(currentStep + 1);
+    }
+
+    function previousStep() {
+        showStep(currentStep - 1);
+    }
+
+    document.getElementById('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        // Vous pouvez ajouter ici la logique de soumission du formulaire
+    });
+
+</script>

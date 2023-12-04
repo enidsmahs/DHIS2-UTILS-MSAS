@@ -1,11 +1,4 @@
-<!-- 
-    "authors": "Shamsdine NDAW, Adja Thiouna FALL, Moustapha NDOUR",
-    "name": "PTA",
-    "version": "1.0",
-    "description": "Formulaire annuel Plan de Travail Annuel"
- -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/floatthead/1.4.0/jquery.floatThead-slim.min.js"></script>
-<script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/floatthead/1.4.0/jquery.floatThead-slim.min.js"></script><script>
     $(function () {
         $("#tabs").tabs();
     });
@@ -37,6 +30,23 @@
         var ouID = dhis2.de.currentOrganisationUnitId;
 
         var requestURL = '../api/organisationUnits/' + ouID;
+
+        fetch(requestURL, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(response => {
+                console.log('response: ' + response.body);
+            })
+            .then(data => {
+                console.log('data: ' + data);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
         $.ajax({
             type: "GET",
             url: requestURL,
@@ -97,25 +107,25 @@
 
         /* PROGRAMME 2 */
         else if (optionResultatUID.value === 'XfQcTghJ6oo') {
-            $('.r5').show(); $('.r6').hide(); $('.r7').hide(); $('.r8').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
+            $('.r5').show(); $('.r6').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
         }
         else if (optionResultatUID.value === 'SRnYVDeKWYN') {
-            $('.r5').hide(); $('.r6').show(); $('.r7').hide(); $('.r8').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
+            $('.r5').hide(); $('.r6').show(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
         }
         else if (optionResultatUID.value === 'ibheTGRIcm3') {
-            $('.r5').hide(); $('.r6').hide(); $('.r7').show(); $('.r8').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
+            $('.r5').hide(); $('.r6').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
         }
         else if (optionResultatUID.value === 'HJaKBUO6PiZ') {
-            $('.r5').hide(); $('.r6').hide(); $('.r7').hide(); $('.r8').show(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
+            $('.r5').hide(); $('.r6').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').hide();
         }
         else if (optionResultatUID.value === 'XQfxSKlVBt4') {
-            $('.r5').hide(); $('.r6').hide(); $('.r7').hide(); $('.r8').hide(); $('.r9').show(); $('.r10').hide(); $('.r11').hide();
+            $('.r5').hide(); $('.r6').hide(); $('.r9').show(); $('.r10').hide(); $('.r11').hide();
         }
         else if (optionResultatUID.value === 'NTeW0QaF3Kd') {
-            $('.r5').hide(); $('.r6').hide(); $('.r7').hide(); $('.r8').hide(); $('.r9').hide(); $('.r10').show(); $('.r11').hide();
+            $('.r5').hide(); $('.r6').hide(); $('.r9').hide(); $('.r10').show(); $('.r11').hide();
         }
         else if (optionResultatUID.value === 'yJYEMVE876n') {
-            $('.r5').hide(); $('.r6').hide(); $('.r7').hide(); $('.r8').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').show();
+            $('.r5').hide(); $('.r6').hide(); $('.r9').hide(); $('.r10').hide(); $('.r11').show();
         }
 
         /* PROGRAMME 3 */
@@ -189,7 +199,7 @@
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:2px solid #000000"><input id="FoeRuB5qNXo-DJayciQdMVJ-val" name="entryfield" title="IR2.Disponibilité de l'annuaire statistique N-1 Cible année N+2 " value="[ IR2.Disponibilité de l'annuaire statistique N-1 Cible année N+2  ]" /></td>
 		</tr>
 		<tr class="r2">
-			<td align="left" height="15" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Times New Roman"><font size="4"><font color="#000000">IR3.Transmission de l&rsquo;agenda l&eacute;gislatif et r&eacute;glementaire du MSAS Pourcentage de textes de l&#39;agenda legislatifs et r&eacute;glementaires &eacute;labor&eacute;s et transmis</font> </font> </font></td>
+			<td align="left" height="15" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Times New Roman"><font size="4"><font color="#000000">IR3.MSAS Pourcentage de textes de l&#39;agenda legislatifs et r&eacute;glementaires &eacute;labor&eacute;s et transmis</font> </font> </font></td>
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="ZmNtuUQ7sxR-wUczGn7zo0x-val" name="entryfield" title="IR3.Pourcentage de textes de l'agenda législatifs et réglementaires élaborés et transmis Réalisation année N-2 " value="[ IR3.Pourcentage de textes de l'agenda législatifs et réglementaires élaborés et transmis Réalisation année N-2  ]" /></td>
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="ZmNtuUQ7sxR-HAtuXFbpmdN-val" name="entryfield" title="IR3.Pourcentage de textes de l'agenda législatifs et réglementaires élaborés et transmis Rappel cible année N-1 " value="[ IR3.Pourcentage de textes de l'agenda législatifs et réglementaires élaborés et transmis Rappel cible année N-1  ]" /></td>
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="ZmNtuUQ7sxR-gndx87fhFS1-val" name="entryfield" title="IR3.Pourcentage de textes de l'agenda législatifs et réglementaires élaborés et transmis Cible année N " value="[ IR3.Pourcentage de textes de l'agenda législatifs et réglementaires élaborés et transmis Cible année N  ]" /></td>
@@ -261,7 +271,7 @@
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><input id="eFdOimld3L6-Q8z53tLaSaW-val" name="entryfield" title="IR8. Taux de réalisation du monitoring Cible année N+1 " value="[ IR8. Taux de réalisation du monitoring Cible année N+1  ]" /></td>
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:2px solid #000000"><input id="eFdOimld3L6-DJayciQdMVJ-val" name="entryfield" title="IR8. Taux de réalisation du monitoring Cible année N+2 " value="[ IR8. Taux de réalisation du monitoring Cible année N+2  ]" /></td>
 		</tr>
-		<tr class="r7">
+		<tr class="r10">
 			<td align="left" height="36" style="border-top:2px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Times New Roman"><font size="4">IR3. Taux de couverture ad&eacute;quate en CPN</font> </font></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mG2LEgbdW8w-wUczGn7zo0x-val" name="entryfield" title="IR9. Taux de couverture adéquate en CPN Réalisation année N-2 " value="[ IR9. Taux de couverture adéquate en CPN Réalisation année N-2  ]" /></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="mG2LEgbdW8w-HAtuXFbpmdN-val" name="entryfield" title="IR9. Taux de couverture adéquate en CPN Rappel cible année N-1 " value="[ IR9. Taux de couverture adéquate en CPN Rappel cible année N-1  ]" /></td>
@@ -269,7 +279,7 @@
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><input id="mG2LEgbdW8w-Q8z53tLaSaW-val" name="entryfield" title="IR9. Taux de couverture adéquate en CPN Cible année N+1 " value="[ IR9. Taux de couverture adéquate en CPN Cible année N+1  ]" /></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:2px solid #000000"><input id="mG2LEgbdW8w-DJayciQdMVJ-val" name="entryfield" title="IR9. Taux de couverture adéquate en CPN Cible année N+2 " value="[ IR9. Taux de couverture adéquate en CPN Cible année N+2  ]" /></td>
 		</tr>
-		<tr class="r8">
+		<tr class="r9">
 			<td align="left" height="48" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Times New Roman"><font size="4">IR4. Pourcentage de districts sanitaires ayant d&eacute;tect&eacute; et contr&ocirc;l&eacute; des &eacute;pid&eacute;mies et situations d&#39;urgence</font> </font></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xhURhigFeJH-wUczGn7zo0x-val" name="entryfield" title="IR10. Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Réalisation année N-2 " value="[ IR10. Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Réalisation année N-2  ]" /></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="xhURhigFeJH-HAtuXFbpmdN-val" name="entryfield" title="IR10. Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Rappel cible année N-1 " value="[ IR10. Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Rappel cible année N-1  ]" /></td>
@@ -715,7 +725,7 @@
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><input id="gR1sAa6hcWl-GpcgZtZAzBM-val" name="entryfield" title="Eval_Taux de réalisation du monitoring Ecart (réalisation année N-1-Réalisation année N)" value="[ Eval_Taux de réalisation du monitoring Ecart (réalisation année N-1-Réalisation année N) ]" /></td>
 			<td align="left" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:2px solid #000000"><input id="gR1sAa6hcWl-KlntgWVyppy-val" name="entryfield" title="Eval_Taux de réalisation du monitoring Ecart (Cible année N- Réalisation année N)" value="[ Eval_Taux de réalisation du monitoring Ecart (Cible année N- Réalisation année N) ]" /></td>
 		</tr>
-		<tr class="r7">
+		<tr class="r10">
 			<td align="left" height="58" style="border-top:2px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Times New Roman"><font size="4">IR3. Taux de couverture ad&eacute;quate en CPN</font> </font></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qqHzIC2PEHE-RrHaVpPYket-val" name="entryfield" title="Eval_Taux de couverture adéquate en CPN Réalisation année N-1" value="[ Eval_Taux de couverture adéquate en CPN Réalisation année N-1 ]" /></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="qqHzIC2PEHE-zQSt7XfpgiE-val" name="entryfield" title="Eval_Taux de couverture adéquate en CPN Cible année N " value="[ Eval_Taux de couverture adéquate en CPN Cible année N  ]" /></td>
@@ -723,7 +733,7 @@
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><input id="qqHzIC2PEHE-GpcgZtZAzBM-val" name="entryfield" title="Eval_Taux de couverture adéquate en CPN Ecart (réalisation année N-1-Réalisation année N)" value="[ Eval_Taux de couverture adéquate en CPN Ecart (réalisation année N-1-Réalisation année N) ]" /></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:2px solid #000000; border-left:1px solid #000000; border-right:2px solid #000000"><input id="qqHzIC2PEHE-KlntgWVyppy-val" name="entryfield" title="Eval_Taux de couverture adéquate en CPN Ecart (Cible année N- Réalisation année N)" value="[ Eval_Taux de couverture adéquate en CPN Ecart (Cible année N- Réalisation année N) ]" /></td>
 		</tr>
-		<tr class="r8">
+		<tr class="r9">
 			<td align="left" height="110" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><font face="Times New Roman"><font size="4">IR4. Pourcentage de districts sanitaires ayant d&eacute;tect&eacute; et contr&ocirc;l&eacute; des &eacute;pid&eacute;mies et situations d&#39;urgence</font> </font></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="OZdfktkZajp-RrHaVpPYket-val" name="entryfield" title="Eval_Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Réalisation année N-1" value="[ Eval_Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Réalisation année N-1 ]" /></td>
 			<td align="left" style="border-top:2px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><input id="OZdfktkZajp-zQSt7XfpgiE-val" name="entryfield" title="Eval_Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Cible année N " value="[ Eval_Pourcentage de districts sanitaires ayant détecté et contrôlé des épidémies et situations d'urgence Cible année N  ]" /></td>
